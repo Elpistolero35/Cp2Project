@@ -1,7 +1,7 @@
 package Logic;
 
-import projectv01.GUI.testingFrameCodes;
-import projectv01.GUI.*;
+import GUI.MainPage;
+import GUI.testingFrameCodes;
 
 import java.awt.*;
 import javax.swing.*;
