@@ -1,25 +1,27 @@
 package Logic;
 
-
-
 public class Employee {
+
     private int id;
     private String firstName;
-    private String lastName;
+    private String surname;
     private String address;
     private String phone;
     private String salary;
+    private String gender;
+    private static int counter = 1;
 
-    public Employee(int id, String firstName, String lastName, String address, String phone, String salary) {
-        this.id = id;
+    public Employee(String firstName, String surname, String address, String phone, String salary, String gender) {
         this.firstName = firstName;
-        this.lastName = lastName;
+        this.surname = surname;
         this.address = address;
         this.phone = phone;
         this.salary = salary;
+        this.gender = gender;
+        this.id = counter;
+        counter++;
     }
 
-    
     //Getters and setter (Auto generated)
     public int getId() {
         return id;
@@ -28,17 +30,15 @@ public class Employee {
     public void setId(int id) {
         this.id = id;
     }
-    
+
     //Full Name implementation
     public String getFullName() {
-        return "";
+        return firstName + " " + surname;
     }
-   
+
     public void setFullName() {
-        
+
     }
-    //////
-    
 
     public String getFirstName() {
         return firstName;
@@ -49,11 +49,11 @@ public class Employee {
     }
 
     public String getLastName() {
-        return lastName;
+        return surname;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.surname = lastName;
     }
 
     public String getAddress() {

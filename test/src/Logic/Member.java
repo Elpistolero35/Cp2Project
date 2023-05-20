@@ -1,11 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Logic;
-
-import java.util.Date;
-
 
 public class Member {
 
@@ -16,19 +10,20 @@ public class Member {
     private String phone;
     private String gender;
     private String birthDate;
-
+    private static int counter = 1;
     public Member() {
 
     }
 
-    public Member(int id, String firstName, String lastName, String address, String phone, String gender, String birthDate) {
-        this.id = id;
+    public Member( String firstName, String lastName, String address, String phone, String gender, String birthDate) {
+        this.id = counter;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.phone = phone;
         this.gender = gender;
         this.birthDate = birthDate;
+        counter++;
     }
 
     //Getters and setter (Auto generated)
@@ -45,12 +40,6 @@ public class Member {
         return "";
     }
    
-    public void setFullName() {
-        
-    }
-    //////
-    
-    
     public String getFirstName() {
         return firstName;
     }

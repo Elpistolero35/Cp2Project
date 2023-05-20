@@ -8,8 +8,8 @@ public class PolytechnicStaff extends Member{
     private String position;
     private String department;
 
-    public PolytechnicStaff(int id, String firstName, String lastName, String address, String phone, String gender, String birthDate,String position, String department) {
-        super(id, firstName, lastName, address, phone, gender, birthDate);
+    public PolytechnicStaff( String firstName, String lastName, String address, String phone, String gender, String birthDate,String position, String department) {
+        super( firstName, lastName, address, phone, gender, birthDate);
         this.position = position;
         this.department = department;
     }
