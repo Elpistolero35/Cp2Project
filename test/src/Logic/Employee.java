@@ -12,8 +12,8 @@ public class Employee {
     private static int counter = 1;
 
     public Employee(String firstName, String surname, String address, String phone, String salary, String gender) {
-        this.firstName = firstName;
-        this.surname = surname;
+        this.firstName = Character.toUpperCase(firstName.charAt(0)) + firstName.substring(1);
+        this.surname = Character.toUpperCase(surname.charAt(0)) + surname.substring(1);
         this.address = address;
         this.phone = phone;
         this.salary = salary;
@@ -87,5 +87,5 @@ public class Employee {
     public void setSalary(String salary) {
         this.salary = salary;
     }
-
+    
 }

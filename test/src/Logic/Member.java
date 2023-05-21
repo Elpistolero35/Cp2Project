@@ -1,24 +1,24 @@
-
 package Logic;
 
 public class Member {
 
     private int id;
     private String firstName;
-    private String lastName;
+    private String surname;
     private String address;
     private String phone;
     private String gender;
     private String birthDate;
     private static int counter = 1;
+
     public Member() {
 
     }
 
-    public Member( String firstName, String lastName, String address, String phone, String gender, String birthDate) {
+    public Member(String firstName, String surname, String address, String phone, String gender, String birthDate) {
         this.id = counter;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstName = Character.toUpperCase(firstName.charAt(0)) + firstName.substring(1);
+        this.surname = Character.toUpperCase(surname.charAt(0)) + surname.substring(1);
         this.address = address;
         this.phone = phone;
         this.gender = gender;
@@ -34,12 +34,12 @@ public class Member {
     public void setId(int id) {
         this.id = id;
     }
-    
+
     //Full Name implementation
     public String getFullName() {
-        return "";
+        return firstName + " " + surname;
     }
-   
+
     public String getFirstName() {
         return firstName;
     }
@@ -48,12 +48,12 @@ public class Member {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setSurname(String lastName) {
+        this.surname = lastName;
     }
 
     public String getAddress() {
@@ -86,6 +86,22 @@ public class Member {
 
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public String getPosition() {
+        return "";
+    }
+
+    public String getDepartment() {
+        return "";
+    }
+
+    public String getMajor() {
+        return "";
+    }
+
+    public String getTeam() {
+        return "";
     }
 
 }

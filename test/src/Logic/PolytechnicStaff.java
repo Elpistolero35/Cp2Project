@@ -8,14 +8,14 @@ public class PolytechnicStaff extends Member{
     private String position;
     private String department;
 
-    public PolytechnicStaff( String firstName, String lastName, String address, String phone, String gender, String birthDate,String position, String department) {
-        super( firstName, lastName, address, phone, gender, birthDate);
-        this.position = position;
-        this.department = department;
+    public PolytechnicStaff( String firstName, String surname, String address, String phone, String gender, String birthDate,String position, String department) {
+        super( firstName, surname, address, phone, gender, birthDate);
+        this.position = Character.toUpperCase(position.charAt(0)) + position.substring(1);
+        this.department = Character.toUpperCase(department.charAt(0)) + department.substring(1);
     }
     
     
-    //Getters and setter (Auto generated)
+    @Override
     public String getPosition() {
         return position;
     }
@@ -24,6 +24,7 @@ public class PolytechnicStaff extends Member{
         this.position = position;
     }
 
+    @Override
     public String getDepartment() {
         return department;
     }
