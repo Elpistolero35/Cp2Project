@@ -130,12 +130,33 @@ public class MainPage extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         empTableList = new GUI.List.Table();
         textField1 = new GUI.TextField();
-        button2 = new GUI.Button();
+        editEmployeebtn = new GUI.Button();
         deletebtn = new GUI.Button();
         manageMembersPnl = new javax.swing.JPanel();
         jPanel2 = new RoundPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         membersTables = new GUI.List.Table();
+        editEmployeePnl = new javax.swing.JPanel();
+        jPanel5 = new RoundPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        txtPhoneNumberEmpInput1 = new GUI.TextField();
+        txtSurnameEmpInput1 = new GUI.TextField();
+        txtFirstNameEmpInput1 = new GUI.TextField();
+        txtSalaryEmpInput1 = new GUI.TextField();
+        txtAddressEmpInput1 = new GUI.TextField();
+        jLabel21 = new javax.swing.JLabel();
+        RegularEmpbtn1 = new GUI.RadioButtonCustom();
+        EmpFemalebtn1 = new GUI.RadioButtonCustom();
+        EmpMalebtn1 = new GUI.RadioButtonCustom();
+        TrainerEmpbtn1 = new GUI.RadioButtonCustom();
+        AddEmpbtn1 = new GUI.Button();
+        CancelEmpbtn1 = new GUI.Button();
 
         dateChooser.setTextRefernce(txtMemberDateInput);
 
@@ -335,7 +356,7 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(dashboardPnlLayout.createSequentialGroup()
                 .addGap(293, 293, 293)
                 .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(452, Short.MAX_VALUE))
+                .addContainerGap(460, Short.MAX_VALUE))
         );
         dashboardPnlLayout.setVerticalGroup(
             dashboardPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -354,31 +375,24 @@ public class MainPage extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(710, 405));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Add Employee form");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("First name");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Address");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Phone number");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Salary");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Surname");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Gender");
 
         txtPhoneNumberEmpInput.addActionListener(new java.awt.event.ActionListener() {
@@ -412,7 +426,6 @@ public class MainPage extends javax.swing.JFrame {
         });
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Employee type");
 
         employeeTypeButtonGroup.add(RegularEmpbtn);
@@ -466,9 +479,9 @@ public class MainPage extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(275, Short.MAX_VALUE)
+                .addContainerGap(274, Short.MAX_VALUE)
                 .addComponent(AddEmpbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
                 .addComponent(CancelEmpbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(277, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -555,7 +568,7 @@ public class MainPage extends javax.swing.JFrame {
             addEmployeePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addEmployeePnlLayout.createSequentialGroup()
                 .addContainerGap(16, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 844, Short.MAX_VALUE)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
         addEmployeePnlLayout.setVerticalGroup(
@@ -576,7 +589,6 @@ public class MainPage extends javax.swing.JFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(710, 405));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Add Member form");
 
         Cancelbtn.setBackground(new java.awt.Color(204, 0, 51));
@@ -608,7 +620,6 @@ public class MainPage extends javax.swing.JFrame {
         });
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Phone number");
 
         txtMemberSurnameInput.addActionListener(new java.awt.event.ActionListener() {
@@ -618,7 +629,6 @@ public class MainPage extends javax.swing.JFrame {
         });
 
         jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(0, 0, 0));
         jLabel25.setText("Surname");
 
         txtMemberFirstNameInput.addActionListener(new java.awt.event.ActionListener() {
@@ -628,7 +638,6 @@ public class MainPage extends javax.swing.JFrame {
         });
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("First name");
 
         javax.swing.GroupLayout leftpanelLayout = new javax.swing.GroupLayout(leftpanel);
@@ -690,11 +699,9 @@ public class MainPage extends javax.swing.JFrame {
         });
 
         jLabel31.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(0, 0, 0));
         jLabel31.setText("Member type");
 
         lblMajorOrPosition.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblMajorOrPosition.setForeground(new java.awt.Color(0, 0, 0));
         lblMajorOrPosition.setText("Major");
 
         txtMemberMajorOrPositionInput.addActionListener(new java.awt.event.ActionListener() {
@@ -704,7 +711,6 @@ public class MainPage extends javax.swing.JFrame {
         });
 
         lblSportTeamOrDepartment.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblSportTeamOrDepartment.setForeground(new java.awt.Color(0, 0, 0));
         lblSportTeamOrDepartment.setText("SportTeam ");
 
         txtMemberSportTeamOrDepartmentInput.setText(" ");
@@ -761,11 +767,9 @@ public class MainPage extends javax.swing.JFrame {
         });
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
         jLabel24.setText("Address");
 
         jLabel32.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(0, 0, 0));
         jLabel32.setText("Gender");
 
         MembersGenderButtonGroup.add(malebtn);
@@ -805,7 +809,6 @@ public class MainPage extends javax.swing.JFrame {
         });
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Date of Birth");
 
         javax.swing.GroupLayout RightPanelLayout = new javax.swing.GroupLayout(RightPanel);
@@ -864,11 +867,11 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(jLabel15)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(leftpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(RightPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(MiddlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
@@ -903,7 +906,7 @@ public class MainPage extends javax.swing.JFrame {
             addMemberPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addMemberPnlLayout.createSequentialGroup()
                 .addGap(0, 29, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 814, Short.MAX_VALUE)
                 .addGap(0, 32, Short.MAX_VALUE))
         );
         addMemberPnlLayout.setVerticalGroup(
@@ -949,19 +952,21 @@ public class MainPage extends javax.swing.JFrame {
         empTableList.setShowVerticalLines(false);
         jScrollPane2.setViewportView(empTableList);
 
-        button2.setBackground(new java.awt.Color(153, 255, 153));
-        button2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/images/pen.png"))); // NOI18N
-        button2.setText("Edit");
-        button2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        button2.addActionListener(new java.awt.event.ActionListener() {
+        editEmployeebtn.setBackground(new java.awt.Color(153, 255, 153));
+        editEmployeebtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/images/pen.png"))); // NOI18N
+        editEmployeebtn.setText("Edit");
+        editEmployeebtn.setFocusable(false);
+        editEmployeebtn.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        editEmployeebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button2ActionPerformed(evt);
+                editEmployeebtnActionPerformed(evt);
             }
         });
 
         deletebtn.setBackground(new java.awt.Color(204, 0, 51));
         deletebtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/images/trashIconImage.png"))); // NOI18N
         deletebtn.setText("Delete");
+        deletebtn.setFocusable(false);
         deletebtn.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         deletebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -979,7 +984,7 @@ public class MainPage extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(editEmployeebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
                         .addComponent(deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -991,7 +996,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editEmployeebtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1003,9 +1008,9 @@ public class MainPage extends javax.swing.JFrame {
         manageEmployeesPnlLayout.setHorizontalGroup(
             manageEmployeesPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(manageEmployeesPnlLayout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         manageEmployeesPnlLayout.setVerticalGroup(
             manageEmployeesPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1043,7 +1048,7 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(171, 171, 171)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addContainerGap(192, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1058,9 +1063,9 @@ public class MainPage extends javax.swing.JFrame {
         manageMembersPnlLayout.setHorizontalGroup(
             manageMembersPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(manageMembersPnlLayout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         manageMembersPnlLayout.setVerticalGroup(
             manageMembersPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1071,6 +1076,219 @@ public class MainPage extends javax.swing.JFrame {
         );
 
         pnlCards.add(manageMembersPnl, "manageMembersPnl");
+
+        editEmployeePnl.setBackground(new java.awt.Color(0, 143, 140));
+        editEmployeePnl.setForeground(new java.awt.Color(255, 255, 255));
+
+        jPanel5.setBackground(new java.awt.Color(199, 255, 237));
+        jPanel5.setPreferredSize(new java.awt.Dimension(710, 405));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel7.setText("Edit Employee form");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel9.setText("First name");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel10.setText("Address");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel11.setText("Phone number");
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel12.setText("Salary");
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel13.setText("Surname");
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel14.setText("Gender");
+
+        txtPhoneNumberEmpInput1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPhoneNumberEmpInput1ActionPerformed(evt);
+            }
+        });
+
+        txtSurnameEmpInput1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSurnameEmpInput1ActionPerformed(evt);
+            }
+        });
+
+        txtFirstNameEmpInput1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFirstNameEmpInput1ActionPerformed(evt);
+            }
+        });
+
+        txtSalaryEmpInput1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSalaryEmpInput1ActionPerformed(evt);
+            }
+        });
+
+        txtAddressEmpInput1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAddressEmpInput1ActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel21.setText("Employee type");
+
+        employeeTypeButtonGroup.add(RegularEmpbtn1);
+        RegularEmpbtn1.setText("Regular");
+        RegularEmpbtn1.setFocusable(false);
+
+        EmpGenderButtonGroup.add(EmpFemalebtn1);
+        EmpFemalebtn1.setText("Female");
+        EmpFemalebtn1.setFocusable(false);
+        EmpFemalebtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpFemalebtn1ActionPerformed(evt);
+            }
+        });
+
+        EmpGenderButtonGroup.add(EmpMalebtn1);
+        EmpMalebtn1.setText("Male");
+        EmpMalebtn1.setFocusable(false);
+        EmpMalebtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmpMalebtn1ActionPerformed(evt);
+            }
+        });
+
+        employeeTypeButtonGroup.add(TrainerEmpbtn1);
+        TrainerEmpbtn1.setText("Trainer");
+        TrainerEmpbtn1.setFocusable(false);
+
+        AddEmpbtn1.setBackground(new java.awt.Color(0, 143, 140));
+        AddEmpbtn1.setText("Edit");
+        AddEmpbtn1.setFocusable(false);
+        AddEmpbtn1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        AddEmpbtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddEmpbtn1ActionPerformed(evt);
+            }
+        });
+
+        CancelEmpbtn1.setBackground(new java.awt.Color(204, 0, 51));
+        CancelEmpbtn1.setText("Cancel");
+        CancelEmpbtn1.setFocusable(false);
+        CancelEmpbtn1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        CancelEmpbtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CancelEmpbtn1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap(274, Short.MAX_VALUE)
+                .addComponent(AddEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addComponent(CancelEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(275, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel13)
+                                .addComponent(txtSurnameEmpInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel12)
+                                .addComponent(txtSalaryEmpInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel9)
+                                .addComponent(txtFirstNameEmpInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(txtAddressEmpInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(EmpMalebtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(EmpFemalebtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPhoneNumberEmpInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(RegularEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)
+                                .addComponent(TrainerEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel21)))
+                    .addComponent(jLabel7))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(RegularEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(EmpFemalebtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(EmpMalebtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TrainerEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(txtFirstNameEmpInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel13))))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtSurnameEmpInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAddressEmpInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPhoneNumberEmpInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtSalaryEmpInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AddEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CancelEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66))
+        );
+
+        javax.swing.GroupLayout editEmployeePnlLayout = new javax.swing.GroupLayout(editEmployeePnl);
+        editEmployeePnl.setLayout(editEmployeePnlLayout);
+        editEmployeePnlLayout.setHorizontalGroup(
+            editEmployeePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(editEmployeePnlLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 844, Short.MAX_VALUE)
+                .addGap(25, 25, 25))
+        );
+        editEmployeePnlLayout.setVerticalGroup(
+            editEmployeePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(editEmployeePnlLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+                .addGap(66, 66, 66))
+        );
+
+        pnlCards.add(editEmployeePnl, "editEmployeePnl");
 
         mainPage.setRightComponent(pnlCards);
 
@@ -1098,18 +1316,8 @@ public class MainPage extends javax.swing.JFrame {
     }//GEN-LAST:event_addEmployeeButtonActionPerformed
 
     private void manageEmployeesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployeesButtonActionPerformed
-        DefaultTableModel tableModel = (DefaultTableModel) empTableList.getModel();
-        tableModel.setRowCount(0);
-
-        for (int i = 0; i < GymSystem.getEmployeesList().size(); i++) {
-            String type = GymSystem.getEmployeesList().get(i) instanceof PersonalTrainer ? "Trainer" : "Regular";
-            int id = GymSystem.getEmployeesList().get(i).getId();
-            String name = GymSystem.getEmployeesList().get(i).getFullName();
-            String address = GymSystem.getEmployeesList().get(i).getAddress();
-            String phone = GymSystem.getEmployeesList().get(i).getPhone();
-            empTableList.addRow(new Object[]{id,name,address,phone,type});
-        }
-
+        
+        renderTableData();
         cardLayout.show(pnlCards, "manageEmployeesPnl");
     }//GEN-LAST:event_manageEmployeesButtonActionPerformed
 
@@ -1124,11 +1332,12 @@ public class MainPage extends javax.swing.JFrame {
 
     private void manageMembersButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageMembersButtonActionPerformed
         // TODO add your handling code here:
-        cardLayout.show(pnlCards, "manageMembersPnl");
+
     }//GEN-LAST:event_manageMembersButtonActionPerformed
 
     private void assignTrainerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignTrainerButtonActionPerformed
         // TODO add your handling code here:
+        cardLayout.show(pnlCards, "manageEmployeesPnl");
     }//GEN-LAST:event_assignTrainerButtonActionPerformed
 
     private void listTrainersButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listTrainersButton1ActionPerformed
@@ -1374,13 +1583,77 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_EmpFemalebtnActionPerformed
 
-    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+    private void editEmployeebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEmployeebtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_button2ActionPerformed
+        int row = empTableList.getSelectedRow();
+        String gender;
+        if (empTableList.getSelectedRow() < 0) {
+            PopupMessage("please select an Employee");
+        } else {
+            if ("male".equalsIgnoreCase(GymSystem.getEmployeesList().get(row).getGender())) {
+                EmpMalebtn1.setSelected(true);
+            } else {
+                EmpFemalebtn1.setSelected(true);
+            }
+            txtFirstNameEmpInput1.setText(GymSystem.getEmployeesList().get(row).getFirstName());
+            txtSurnameEmpInput1.setText(GymSystem.getEmployeesList().get(row).getSurname());
+            txtAddressEmpInput1.setText(GymSystem.getEmployeesList().get(row).getAddress());
+            txtSalaryEmpInput1.setText(GymSystem.getEmployeesList().get(row).getSalary());
+            txtPhoneNumberEmpInput1.setText(GymSystem.getEmployeesList().get(row).getPhone());
+
+            cardLayout.show(pnlCards, "editEmployeePnl");
+        }
+
+
+    }//GEN-LAST:event_editEmployeebtnActionPerformed
 
     private void deletebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebtnActionPerformed
         // TODO add your handling code here:
+        int row = empTableList.getSelectedRow();
+        if (empTableList.getSelectedRow() < 0) {
+            PopupMessage("please select an Employee");
+        } else {
+            GymSystem.getEmployeesList().remove(row);
+            renderTableData();
+        }
+
     }//GEN-LAST:event_deletebtnActionPerformed
+
+    private void txtPhoneNumberEmpInput1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneNumberEmpInput1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPhoneNumberEmpInput1ActionPerformed
+
+    private void txtSurnameEmpInput1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSurnameEmpInput1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSurnameEmpInput1ActionPerformed
+
+    private void txtFirstNameEmpInput1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFirstNameEmpInput1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFirstNameEmpInput1ActionPerformed
+
+    private void txtSalaryEmpInput1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSalaryEmpInput1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSalaryEmpInput1ActionPerformed
+
+    private void txtAddressEmpInput1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddressEmpInput1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAddressEmpInput1ActionPerformed
+
+    private void EmpFemalebtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpFemalebtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpFemalebtn1ActionPerformed
+
+    private void EmpMalebtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpMalebtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpMalebtn1ActionPerformed
+
+    private void AddEmpbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddEmpbtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AddEmpbtn1ActionPerformed
+
+    private void CancelEmpbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelEmpbtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CancelEmpbtn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1420,42 +1693,55 @@ public class MainPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.Button AddEmpbtn;
+    private GUI.Button AddEmpbtn1;
     private GUI.Button Addbtn;
     private GUI.Button CancelEmpbtn;
+    private GUI.Button CancelEmpbtn1;
     private GUI.Button Cancelbtn;
     private GUI.RadioButtonCustom EmpFemalebtn;
+    private GUI.RadioButtonCustom EmpFemalebtn1;
     private javax.swing.ButtonGroup EmpGenderButtonGroup;
     private GUI.RadioButtonCustom EmpMalebtn;
+    private GUI.RadioButtonCustom EmpMalebtn1;
     private javax.swing.ButtonGroup MembersGenderButtonGroup;
     private javax.swing.JPanel MiddlePanel;
     private GUI.Button PickDatebtn;
     private GUI.RadioButtonCustom RegularEmpbtn;
+    private GUI.RadioButtonCustom RegularEmpbtn1;
     private javax.swing.JPanel RightPanel;
     private GUI.RadioButtonCustom Staffbtn;
     private GUI.RadioButtonCustom Studentbtn;
     private GUI.RadioButtonCustom TrainerEmpbtn;
+    private GUI.RadioButtonCustom TrainerEmpbtn1;
     private javax.swing.JButton addEmployeeButton;
     private javax.swing.JPanel addEmployeePnl;
     private javax.swing.JButton addMemberButton;
     private javax.swing.JPanel addMemberPnl;
     private javax.swing.JButton assignTrainerButton;
     private GUI.Button button1;
-    private GUI.Button button2;
     private javax.swing.JButton dashboardButton;
     private javax.swing.JPanel dashboardPnl;
     private GUI.datechooser.DateChooser dateChooser;
     private GUI.Button deletebtn;
+    private javax.swing.JPanel editEmployeePnl;
+    private GUI.Button editEmployeebtn;
     private javax.swing.JLabel emoployeeSectionLabel;
     private GUI.List.Table empTableList;
     private javax.swing.ButtonGroup employeeTypeButtonGroup;
     private GUI.RadioButtonCustom femalebtn;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
@@ -1464,11 +1750,14 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblMajorOrPosition;
@@ -1489,7 +1778,9 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel pnlCards;
     private GUI.TextField textField1;
     private GUI.TextField txtAddressEmpInput;
+    private GUI.TextField txtAddressEmpInput1;
     private GUI.TextField txtFirstNameEmpInput;
+    private GUI.TextField txtFirstNameEmpInput1;
     private GUI.TextField txtMemberAddressInput;
     private GUI.TextField txtMemberDateInput;
     private GUI.TextField txtMemberFirstNameInput;
@@ -1498,8 +1789,11 @@ public class MainPage extends javax.swing.JFrame {
     private GUI.TextField txtMemberSportTeamOrDepartmentInput;
     private GUI.TextField txtMemberSurnameInput;
     private GUI.TextField txtPhoneNumberEmpInput;
+    private GUI.TextField txtPhoneNumberEmpInput1;
     private GUI.TextField txtSalaryEmpInput;
+    private GUI.TextField txtSalaryEmpInput1;
     private GUI.TextField txtSurnameEmpInput;
+    private GUI.TextField txtSurnameEmpInput1;
     // End of variables declaration//GEN-END:variables
 
     public boolean isfilled(TextField textField, String error) {
@@ -1626,6 +1920,19 @@ public class MainPage extends javax.swing.JFrame {
         addEmployeeTxt.add(txtAddressEmpInput);
         addEmployeeTxt.add(txtPhoneNumberEmpInput);
         return addEmployeeTxt;
+    }
+
+    public void renderTableData() {
+        DefaultTableModel tableModel = (DefaultTableModel) empTableList.getModel();
+        tableModel.setRowCount(0);
+        for (int i = 0; i < GymSystem.getEmployeesList().size(); i++) {
+            String type = GymSystem.getEmployeesList().get(i) instanceof PersonalTrainer ? "Trainer" : "Regular";
+            int id = GymSystem.getEmployeesList().get(i).getId();
+            String name = GymSystem.getEmployeesList().get(i).getFullName();
+            String address = GymSystem.getEmployeesList().get(i).getAddress();
+            String phone = GymSystem.getEmployeesList().get(i).getPhone();
+            empTableList.addRow(new Object[]{id, name, address, phone, type});
+        }
     }
 
 }

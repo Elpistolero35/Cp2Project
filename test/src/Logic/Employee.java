@@ -22,6 +22,14 @@ public class Employee {
         counter++;
     }
 
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
     //Getters and setter (Auto generated)
     public int getId() {
         return id;
@@ -48,7 +56,7 @@ public class Employee {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    public String getSurname() {
         return surname;
     }
 
