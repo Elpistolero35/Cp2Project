@@ -18,7 +18,10 @@ import Logic.Member;
 import Logic.PersonalTrainer;
 import Logic.PolytechnicStaff;
 import java.awt.Color;
+import java.io.IOException;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
 public class MainPage extends javax.swing.JFrame {
@@ -28,8 +31,9 @@ public class MainPage extends javax.swing.JFrame {
      */
     CardLayout cardLayout;
 
-    public MainPage() {
+    public MainPage() throws IOException, ClassNotFoundException {
         initComponents();
+        GymSystem.ReadEmployees();
         empTableList.fixTable(jScrollPane2);
         GlassPanePopup.install(this);
         cardLayout = (CardLayout) (pnlCards.getLayout());
@@ -136,9 +140,10 @@ public class MainPage extends javax.swing.JFrame {
         jPanel8 = new RoundPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         memberTableList = new GUI.List.Table();
-        textField3 = new GUI.TextField();
+        memberSearchtxt = new GUI.TextField();
         editMemberbtn = new GUI.Button();
         deletebtn2 = new GUI.Button();
+        button2 = new GUI.Button();
         editEmployeePnl = new javax.swing.JPanel();
         jPanel5 = new RoundPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -176,9 +181,9 @@ public class MainPage extends javax.swing.JFrame {
         StudentEditbtn = new GUI.RadioButtonCustom();
         StaffEditbtn = new GUI.RadioButtonCustom();
         jLabel33 = new javax.swing.JLabel();
-        lblMajorOrPosition1 = new javax.swing.JLabel();
+        lblEditMajorOrPosition = new javax.swing.JLabel();
         txtMemberMajorOrPositionEdit = new GUI.TextField();
-        lblSportTeamOrDepartment1 = new javax.swing.JLabel();
+        lblEditSportTeamOrDepartment = new javax.swing.JLabel();
         txtMemberSportTeamOrDepartmentEdit = new GUI.TextField();
         RightPanel1 = new javax.swing.JPanel();
         txtMemberAddressEdit = new GUI.TextField();
@@ -710,6 +715,7 @@ public class MainPage extends javax.swing.JFrame {
         MiddlePanel.setBackground(new java.awt.Color(199, 255, 237));
 
         memberTypeGroupButton.add(Studentbtn);
+        Studentbtn.setSelected(true);
         Studentbtn.setText("Student");
         Studentbtn.setFocusable(false);
         Studentbtn.setPreferredSize(new java.awt.Dimension(64, 41));
@@ -1124,15 +1130,24 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
+        button2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/images/searchIcon.png"))); // NOI18N
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(textField3, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(memberSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(editMemberbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
@@ -1145,12 +1160,13 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(memberSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editMemberbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deletebtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(deletebtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout manageMembersPnlLayout = new javax.swing.GroupLayout(manageMembersPnl);
@@ -1483,6 +1499,7 @@ public class MainPage extends javax.swing.JFrame {
 
         memberTypeGroupButton.add(StudentEditbtn);
         StudentEditbtn.setText("Student");
+        StudentEditbtn.setEnabled(false);
         StudentEditbtn.setFocusable(false);
         StudentEditbtn.setPreferredSize(new java.awt.Dimension(64, 41));
         StudentEditbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -1493,6 +1510,7 @@ public class MainPage extends javax.swing.JFrame {
 
         memberTypeGroupButton.add(StaffEditbtn);
         StaffEditbtn.setText("Staff");
+        StaffEditbtn.setEnabled(false);
         StaffEditbtn.setFocusPainted(false);
         StaffEditbtn.setPreferredSize(new java.awt.Dimension(47, 41));
         StaffEditbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -1504,8 +1522,8 @@ public class MainPage extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel33.setText("Member type");
 
-        lblMajorOrPosition1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblMajorOrPosition1.setText("Major");
+        lblEditMajorOrPosition.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblEditMajorOrPosition.setText("Major");
 
         txtMemberMajorOrPositionEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1513,8 +1531,8 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        lblSportTeamOrDepartment1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblSportTeamOrDepartment1.setText("SportTeam ");
+        lblEditSportTeamOrDepartment.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblEditSportTeamOrDepartment.setText("SportTeam ");
 
         txtMemberSportTeamOrDepartmentEdit.setText(" ");
         txtMemberSportTeamOrDepartmentEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -1535,9 +1553,9 @@ public class MainPage extends javax.swing.JFrame {
                         .addComponent(StudentEditbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
                         .addComponent(StaffEditbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lblMajorOrPosition1)
+                    .addComponent(lblEditMajorOrPosition)
                     .addComponent(txtMemberMajorOrPositionEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSportTeamOrDepartment1)
+                    .addComponent(lblEditSportTeamOrDepartment)
                     .addComponent(txtMemberSportTeamOrDepartmentEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1551,11 +1569,11 @@ public class MainPage extends javax.swing.JFrame {
                     .addComponent(StudentEditbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(StaffEditbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 29, Short.MAX_VALUE)
-                .addComponent(lblMajorOrPosition1)
+                .addComponent(lblEditMajorOrPosition)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtMemberMajorOrPositionEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 30, Short.MAX_VALUE)
-                .addComponent(lblSportTeamOrDepartment1)
+                .addComponent(lblEditSportTeamOrDepartment)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtMemberSportTeamOrDepartmentEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(88, Short.MAX_VALUE))
@@ -1933,7 +1951,7 @@ public class MainPage extends javax.swing.JFrame {
             Member Staff = new PolytechnicStaff(fname, surname, address, phone, gender, date, MajOrPos, txtMemberSportTeamOrDepartmentInput.getText());
             GymSystem.getMembersList().add(Staff);
         }
-        
+
         PopupMessage("Member user had been created");
 
     }//GEN-LAST:event_AddbtnActionPerformed
@@ -1991,11 +2009,16 @@ public class MainPage extends javax.swing.JFrame {
         String gender = EmpMalebtn.isSelected() ? "Male" : "Female";
 
         if (RegularEmpbtn.isSelected()) {
-            Employee one = new Employee(fname, surname, address, phone, salary, gender);
-            GymSystem.addEmployees(one);
+            Employee emp = new Employee(fname, surname, address, phone, salary, gender);
+            GymSystem.getEmployeesList().add(emp);
         } else {
-            Employee one = new PersonalTrainer(fname, surname, address, phone, salary, gender);
-            GymSystem.addEmployees(one);
+            Employee emp = new PersonalTrainer(fname, surname, address, phone, salary, gender);
+            GymSystem.getEmployeesList().add(emp);
+        }
+        try {
+            GymSystem.WriteEmployee();
+        } catch (IOException ex) {
+            Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
         }
         PopupMessage("Employee added succesfuly");
 
@@ -2047,6 +2070,11 @@ public class MainPage extends javax.swing.JFrame {
             PopupMessage("Please select an Employee from the list");
         } else {
             GymSystem.getEmployeesList().remove(row);
+            try {
+                GymSystem.WriteEmployee();
+            } catch (IOException ex) {
+                Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
             renderEmpTableData();
         }
 
@@ -2110,10 +2138,12 @@ public class MainPage extends javax.swing.JFrame {
 
     private void StudentEditbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StudentEditbtnActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_StudentEditbtnActionPerformed
 
     private void StaffEditbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StaffEditbtnActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_StaffEditbtnActionPerformed
 
     private void txtMemberMajorOrPositionEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMemberMajorOrPositionEditActionPerformed
@@ -2146,27 +2176,46 @@ public class MainPage extends javax.swing.JFrame {
 
     private void editMemberbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editMemberbtnActionPerformed
         // TODO add your handling code here:
+
         int row = memberTableList.getSelectedRow();
         String gender;
-        if (memberTableList.getSelectedRow() < 0) {
+        int found;
+        Object id;
+
+        if (row < 0) {
             PopupMessage("Please select a member from the list");
         } else {
-            if ("male".equalsIgnoreCase(GymSystem.getMembersList().get(row).getGender())) {
-                memberMaleEditbtn.setSelected(true);
-            } else {
-                memberFemaleEditbtn.setSelected(true);
-            }
-            txtMemberFirstNameEdit.setText(GymSystem.getMembersList().get(row).getFirstName());
-            txtMemberSurnameEdit.setText(GymSystem.getMembersList().get(row).getSurname());
-            txtMemberAddressEdit.setText(GymSystem.getMembersList().get(row).getAddress());
-            txtMemberPhoneNumberEdit.setText(GymSystem.getMembersList().get(row).getPhone());
-            txtMemberDateEdit.setText(GymSystem.getMembersList().get(row).getBirthDate());
-            if (GymSystem.getMembersList().get(row) instanceof PolytechnicStaff) {
-                txtMemberMajorOrPositionEdit.setText(GymSystem.getMembersList().get(row).getPosition());
-                txtMemberSportTeamOrDepartmentEdit.setText(GymSystem.getMembersList().get(row).getAddress());
-            }else{
-                txtMemberMajorOrPositionEdit.setText(GymSystem.getMembersList().get(row).getMajor());
-                txtMemberSportTeamOrDepartmentEdit.setText(GymSystem.getMembersList().get(row).getTeam());
+            id = memberTableList.getModel().getValueAt(row, 0);
+            String idString = id.toString();
+            int idInt = Integer.parseInt(idString);
+
+            for (int i = 0; i < GymSystem.getMembersList().size(); i++) {
+                if (GymSystem.getMembersList().get(i).getId() == idInt) {
+                    if ("male".equalsIgnoreCase(GymSystem.getMembersList().get(i).getGender())) {
+                        memberMaleEditbtn.setSelected(true);
+                    } else {
+                        memberFemaleEditbtn.setSelected(true);
+                    }
+                    txtMemberFirstNameEdit.setText(GymSystem.getMembersList().get(i).getFirstName());
+                    txtMemberSurnameEdit.setText(GymSystem.getMembersList().get(i).getSurname());
+                    txtMemberAddressEdit.setText(GymSystem.getMembersList().get(i).getAddress());
+                    txtMemberPhoneNumberEdit.setText(GymSystem.getMembersList().get(i).getPhone());
+                    txtMemberDateEdit.setText(GymSystem.getMembersList().get(i).getBirthDate());
+                    if (GymSystem.getMembersList().get(i) instanceof PolytechnicStaff) {
+                        txtMemberMajorOrPositionEdit.setText(GymSystem.getMembersList().get(i).getPosition());
+                        txtMemberSportTeamOrDepartmentEdit.setText(GymSystem.getMembersList().get(i).getAddress());
+                        StaffEditbtn.setSelected(true);
+                        lblEditSportTeamOrDepartment.setText("Department");
+                        lblEditMajorOrPosition.setText("Position");
+                    } else {
+                        txtMemberMajorOrPositionEdit.setText(GymSystem.getMembersList().get(i).getMajor());
+                        txtMemberSportTeamOrDepartmentEdit.setText(GymSystem.getMembersList().get(i).getTeam());
+                        StudentEditbtn.setSelected(true);
+                        lblEditSportTeamOrDepartment.setText("Sport Team");
+                        lblEditMajorOrPosition.setText("Major");
+                    }
+                break;
+                }
             }
 
             cardLayout.show(pnlCards, "editMemberPnl");
@@ -2183,6 +2232,17 @@ public class MainPage extends javax.swing.JFrame {
             renderMemberTableData();
         }
     }//GEN-LAST:event_deletebtn2ActionPerformed
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        // TODO add your handling code here:
+        String input = memberSearchtxt.getText();
+        if (input != null) {
+            renderFilteredMemberTableData(input);
+        } else {
+            renderMemberTableData();
+        }
+
+    }//GEN-LAST:event_button2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2215,7 +2275,13 @@ public class MainPage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainPage().setVisible(true);
+                try {
+                    new MainPage().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -2255,6 +2321,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel addMemberPnl;
     private javax.swing.JButton assignTrainerButton;
     private GUI.Button button1;
+    private GUI.Button button2;
     private javax.swing.JButton dashboardButton;
     private javax.swing.JPanel dashboardPnl;
     private GUI.datechooser.DateChooser dateChooser;
@@ -2308,10 +2375,10 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JLabel lblEditMajorOrPosition;
+    private javax.swing.JLabel lblEditSportTeamOrDepartment;
     private javax.swing.JLabel lblMajorOrPosition;
-    private javax.swing.JLabel lblMajorOrPosition1;
     private javax.swing.JLabel lblSportTeamOrDepartment;
-    private javax.swing.JLabel lblSportTeamOrDepartment1;
     private javax.swing.JPanel leftpanel;
     private javax.swing.JPanel leftpanel1;
     private javax.swing.JButton listTrainersButton;
@@ -2324,13 +2391,13 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel manageMembersPnl;
     private GUI.RadioButtonCustom memberFemaleEditbtn;
     private GUI.RadioButtonCustom memberMaleEditbtn;
+    private GUI.TextField memberSearchtxt;
     private javax.swing.JLabel memberSectionLabel;
     private GUI.List.Table memberTableList;
     private javax.swing.ButtonGroup memberTypeGroupButton;
     private javax.swing.JPanel nvigPnl;
     private javax.swing.JPanel pnlCards;
     private GUI.TextField textField1;
-    private GUI.TextField textField3;
     private GUI.TextField txtAddressEmpEdit;
     private GUI.TextField txtAddressEmpInput;
     private GUI.TextField txtFirstNameEmpEdit;
@@ -2496,6 +2563,23 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
 
+    public void renderFilteredEmpTableData(String s) {
+        DefaultTableModel tableModel = (DefaultTableModel) empTableList.getModel();
+        tableModel.setRowCount(0);
+        for (int i = 0; i < GymSystem.getEmployeesList().size(); i++) {
+            String type = GymSystem.getEmployeesList().get(i) instanceof PersonalTrainer ? "Trainer" : "Regular";
+            int id = GymSystem.getEmployeesList().get(i).getId();
+            String name = GymSystem.getEmployeesList().get(i).getFullName();
+            String address = GymSystem.getEmployeesList().get(i).getAddress();
+            String phone = GymSystem.getEmployeesList().get(i).getPhone();
+
+            if (s.equalsIgnoreCase(String.valueOf(id)) || name.toLowerCase().contains(s.toLowerCase())) {
+                empTableList.addRow(new Object[]{id, name, address, phone, type});
+            }
+
+        }
+    }
+
     public void renderMemberTableData() {
         DefaultTableModel tableModel = (DefaultTableModel) memberTableList.getModel();
         tableModel.setRowCount(0);
@@ -2507,6 +2591,24 @@ public class MainPage extends javax.swing.JFrame {
             String address = GymSystem.getMembersList().get(i).getAddress();
             String phone = GymSystem.getMembersList().get(i).getPhone();
             memberTableList.addRow(new Object[]{id, name, address, phone, type});
+        }
+    }
+
+    public void renderFilteredMemberTableData(String s) {
+        DefaultTableModel tableModel = (DefaultTableModel) memberTableList.getModel();
+        tableModel.setRowCount(0);
+        for (int i = 0; i < GymSystem.getMembersList().size(); i++) {
+
+            String type = GymSystem.getMembersList().get(i) instanceof PolytechnicStaff ? "Staff" : "Student";
+            int id = GymSystem.getMembersList().get(i).getId();
+            String name = GymSystem.getMembersList().get(i).getFullName();
+            String address = GymSystem.getMembersList().get(i).getAddress();
+            String phone = GymSystem.getMembersList().get(i).getPhone();
+
+            if (s.equalsIgnoreCase(String.valueOf(id)) || name.toLowerCase().contains(s.toLowerCase())) {
+                memberTableList.addRow(new Object[]{id, name, address, phone, type});
+            }
+
         }
     }
 

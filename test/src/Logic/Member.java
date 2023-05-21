@@ -1,7 +1,10 @@
 package Logic;
 
-public class Member {
+import java.io.Serializable;
 
+public class Member implements Serializable {
+
+    private static final long serialVersionUID = 2L;
     private int id;
     private String firstName;
     private String surname;

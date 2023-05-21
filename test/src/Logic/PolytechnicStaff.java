@@ -14,8 +14,7 @@ public class PolytechnicStaff extends Member{
         this.department = Character.toUpperCase(department.charAt(0)) + department.substring(1);
     }
     
-    
-    @Override
+   
     public String getPosition() {
         return position;
     }
