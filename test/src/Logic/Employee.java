@@ -1,5 +1,9 @@
 package Logic;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.Serializable;
 
 public class Employee implements Serializable{
@@ -11,7 +15,7 @@ public class Employee implements Serializable{
     private String phone;
     private String salary;
     private String gender;
-    private static int counter = 1;
+    private static int counter;
 
     public Employee(String firstName, String surname, String address, String phone, String salary, String gender) {
         this.firstName = Character.toUpperCase(firstName.charAt(0)) + firstName.substring(1);
@@ -46,24 +50,21 @@ public class Employee implements Serializable{
         return firstName + " " + surname;
     }
 
-    public void setFullName() {
-
-    }
 
     public String getFirstName() {
         return firstName;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.firstName = Character.toUpperCase(firstName.charAt(0)) + firstName.substring(1);
     }
 
     public String getSurname() {
         return surname;
     }
 
-    public void setLastName(String lastName) {
-        this.surname = lastName;
+    public void setSurname(String Surname) {
+        this.surname = Character.toUpperCase(Surname.charAt(0)) + Surname.substring(1);
     }
 
     public String getAddress() {
@@ -88,6 +89,29 @@ public class Employee implements Serializable{
 
     public void setSalary(String salary) {
         this.salary = salary;
+    }
+    
+    
+    
+    public static void saveEmpId() {
+        try {
+            FileWriter fw = new FileWriter("src/Save/empId.txt");
+            fw.write(String.valueOf(counter));
+            fw.close();
+        } catch (IOException e) {
+            System.out.println("Error occured: " + e.getMessage());
+        }
+    }
+
+    public static void loadEmpId() {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("src/Save/empId.txt"));
+            counter = Integer.parseInt(br.readLine());
+            br.close();
+        } catch (IOException e) {
+            counter = 1;
+            System.out.println("Error occured: " + e.getMessage());
+        }
     }
     
 }

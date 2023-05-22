@@ -2,8 +2,6 @@ package GUI;
 
 import Logic.PolytechnicStudent;
 import java.awt.CardLayout;
-
-// all the bellow libraries only to do rounded panel :)
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -34,16 +32,29 @@ public class MainPage extends javax.swing.JFrame {
     public MainPage() throws IOException, ClassNotFoundException {
         initComponents();
         GymSystem.ReadEmployees();
+        GymSystem.ReadMembers();
         empTableList.fixTable(jScrollPane2);
+        memberTableList.fixTable(jScrollPane4);
         GlassPanePopup.install(this);
         cardLayout = (CardLayout) (pnlCards.getLayout());
-
+        Member.loadMemberId();
+        Employee.loadEmpId();
         dateChooser.addEventDateChooser(new EventDateChooser() {
             @Override
             public void dateSelected(SelectedAction action, SelectedDate date) {
                 System.out.println(date.getDay() + "-" + date.getMonth() + "-" + date.getYear());
                 if (action.getAction() == SelectedAction.DAY_SELECTED) {
                     dateChooser.hidePopup();
+                }
+            }
+        });
+        
+        dateChooser1.addEventDateChooser(new EventDateChooser() {
+            @Override
+            public void dateSelected(SelectedAction action, SelectedDate date) {
+                System.out.println(date.getDay() + "-" + date.getMonth() + "-" + date.getYear());
+                if (action.getAction() == SelectedAction.DAY_SELECTED) {
+                    dateChooser1.hidePopup();
                 }
             }
         });
@@ -64,6 +75,7 @@ public class MainPage extends javax.swing.JFrame {
         memberTypeGroupButton = new javax.swing.ButtonGroup();
         MembersGenderButtonGroup = new javax.swing.ButtonGroup();
         dateChooser = new GUI.datechooser.DateChooser();
+        dateChooser1 = new GUI.datechooser.DateChooser();
         mainPage = new javax.swing.JSplitPane();
         nvigPnl = new javax.swing.JPanel();
         emoployeeSectionLabel = new javax.swing.JLabel();
@@ -78,7 +90,6 @@ public class MainPage extends javax.swing.JFrame {
         listTrainersButton1 = new javax.swing.JButton();
         pnlCards = new javax.swing.JPanel();
         dashboardPnl = new javax.swing.JPanel();
-        button1 = new GUI.Button();
         addEmployeePnl = new javax.swing.JPanel();
         jPanel1 = new RoundPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -133,7 +144,8 @@ public class MainPage extends javax.swing.JFrame {
         jPanel4 = new RoundPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         empTableList = new GUI.List.Table();
-        textField1 = new GUI.TextField();
+        button3 = new GUI.Button();
+        employeeSearchtxt = new GUI.TextField();
         editEmployeebtn = new GUI.Button();
         deletebtn = new GUI.Button();
         manageMembersPnl = new javax.swing.JPanel();
@@ -163,7 +175,7 @@ public class MainPage extends javax.swing.JFrame {
         EmpFemaleEditbtn = new GUI.RadioButtonCustom();
         EmpMaleEditbtn = new GUI.RadioButtonCustom();
         TrainerEmpEditbtn = new GUI.RadioButtonCustom();
-        AddEmpbtn1 = new GUI.Button();
+        EditEmpbtn = new GUI.Button();
         CancelEmpbtn1 = new GUI.Button();
         editMemberPnl = new javax.swing.JPanel();
         jPanel6 = new RoundPanel();
@@ -196,6 +208,8 @@ public class MainPage extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
 
         dateChooser.setTextRefernce(txtMemberDateInput);
+
+        dateChooser1.setTextRefernce(txtMemberDateEdit);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gym System\n");
@@ -379,28 +393,15 @@ public class MainPage extends javax.swing.JFrame {
 
         dashboardPnl.setBackground(new java.awt.Color(0, 143, 140));
 
-        button1.setText("button1");
-        button1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout dashboardPnlLayout = new javax.swing.GroupLayout(dashboardPnl);
         dashboardPnl.setLayout(dashboardPnlLayout);
         dashboardPnlLayout.setHorizontalGroup(
             dashboardPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dashboardPnlLayout.createSequentialGroup()
-                .addGap(293, 293, 293)
-                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(464, Short.MAX_VALUE))
+            .addGap(0, 879, Short.MAX_VALUE)
         );
         dashboardPnlLayout.setVerticalGroup(
             dashboardPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dashboardPnlLayout.createSequentialGroup()
-                .addContainerGap(310, Short.MAX_VALUE)
-                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(244, 244, 244))
+            .addGap(0, 584, Short.MAX_VALUE)
         );
 
         pnlCards.add(dashboardPnl, "dashboardPnl");
@@ -962,6 +963,7 @@ public class MainPage extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(199, 255, 237));
         jPanel4.setPreferredSize(new java.awt.Dimension(710, 405));
 
+        empTableList.setBackground(new java.awt.Color(255, 255, 255));
         empTableList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -996,6 +998,14 @@ public class MainPage extends javax.swing.JFrame {
             empTableList.getColumnModel().getColumn(4).setResizable(false);
         }
 
+        button3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/images/searchIcon.png"))); // NOI18N
+        button3.setFocusable(false);
+        button3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button3ActionPerformed(evt);
+            }
+        });
+
         editEmployeebtn.setBackground(new java.awt.Color(153, 255, 153));
         editEmployeebtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/images/pen.png"))); // NOI18N
         editEmployeebtn.setText("Edit");
@@ -1027,23 +1037,27 @@ public class MainPage extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(29, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 298, Short.MAX_VALUE)
+                        .addComponent(employeeSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 248, Short.MAX_VALUE)
                         .addComponent(editEmployeebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
                         .addComponent(deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(42, Short.MAX_VALUE))))
+                        .addContainerGap(27, Short.MAX_VALUE))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editEmployeebtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(employeeSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(editEmployeebtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(deletebtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(49, Short.MAX_VALUE))
@@ -1073,6 +1087,8 @@ public class MainPage extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(199, 255, 237));
         jPanel8.setPreferredSize(new java.awt.Dimension(710, 405));
+
+        jScrollPane4.setBackground(new java.awt.Color(255, 255, 255));
 
         memberTableList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1131,6 +1147,7 @@ public class MainPage extends javax.swing.JFrame {
         });
 
         button2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/images/searchIcon.png"))); // NOI18N
+        button2.setFocusable(false);
         button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button2ActionPerformed(evt);
@@ -1147,7 +1164,7 @@ public class MainPage extends javax.swing.JFrame {
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(memberSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(editMemberbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
@@ -1159,11 +1176,12 @@ public class MainPage extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(memberSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editMemberbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deletebtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(memberSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(editMemberbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(deletebtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(60, Short.MAX_VALUE))
@@ -1250,6 +1268,7 @@ public class MainPage extends javax.swing.JFrame {
 
         employeeTypeButtonGroup.add(RegularEmpEditbtn);
         RegularEmpEditbtn.setText("Regular");
+        RegularEmpEditbtn.setEnabled(false);
         RegularEmpEditbtn.setFocusable(false);
 
         EmpGenderButtonGroup.add(EmpFemaleEditbtn);
@@ -1272,15 +1291,16 @@ public class MainPage extends javax.swing.JFrame {
 
         employeeTypeButtonGroup.add(TrainerEmpEditbtn);
         TrainerEmpEditbtn.setText("Trainer");
+        TrainerEmpEditbtn.setEnabled(false);
         TrainerEmpEditbtn.setFocusable(false);
 
-        AddEmpbtn1.setBackground(new java.awt.Color(0, 143, 140));
-        AddEmpbtn1.setText("Edit");
-        AddEmpbtn1.setFocusable(false);
-        AddEmpbtn1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        AddEmpbtn1.addActionListener(new java.awt.event.ActionListener() {
+        EditEmpbtn.setBackground(new java.awt.Color(0, 143, 140));
+        EditEmpbtn.setText("Edit");
+        EditEmpbtn.setFocusable(false);
+        EditEmpbtn.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        EditEmpbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AddEmpbtn1ActionPerformed(evt);
+                EditEmpbtnActionPerformed(evt);
             }
         });
 
@@ -1300,7 +1320,7 @@ public class MainPage extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap(275, Short.MAX_VALUE)
-                .addComponent(AddEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EditEmpbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
                 .addComponent(CancelEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(276, Short.MAX_VALUE))
@@ -1377,7 +1397,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(txtSalaryEmpEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AddEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EditEmpbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CancelEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(66, 66, 66))
         );
@@ -1387,16 +1407,16 @@ public class MainPage extends javax.swing.JFrame {
         editEmployeePnlLayout.setHorizontalGroup(
             editEmployeePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editEmployeePnlLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(14, 14, 14)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
-                .addGap(25, 25, 25))
+                .addGap(17, 17, 17))
         );
         editEmployeePnlLayout.setVerticalGroup(
             editEmployeePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editEmployeePnlLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(41, 41, 41)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
-                .addGap(66, 66, 66))
+                .addGap(43, 43, 43))
         );
 
         pnlCards.add(editEmployeePnl, "editEmployeePnl");
@@ -1614,7 +1634,6 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        txtMemberDateEdit.setText(" ");
         txtMemberDateEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMemberDateEditActionPerformed(evt);
@@ -1813,21 +1832,6 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAddressEmpInputActionPerformed
 
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-
-        Message obj = new Message();
-        obj.eventOK(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                System.out.println("Click OK");
-                GlassPanePopup.closePopupLast();
-            }
-        });
-        GlassPanePopup.showPopup(obj);
-
-
-    }//GEN-LAST:event_button1ActionPerformed
-
     private void txtMemberDateInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMemberDateInputActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtMemberDateInputActionPerformed
@@ -1951,6 +1955,12 @@ public class MainPage extends javax.swing.JFrame {
             Member Staff = new PolytechnicStaff(fname, surname, address, phone, gender, date, MajOrPos, txtMemberSportTeamOrDepartmentInput.getText());
             GymSystem.getMembersList().add(Staff);
         }
+        try {
+            GymSystem.WriteMember();
+            Member.saveMemberId();
+        } catch (IOException ex) {
+            Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         PopupMessage("Member user had been created");
 
@@ -2017,6 +2027,7 @@ public class MainPage extends javax.swing.JFrame {
         }
         try {
             GymSystem.WriteEmployee();
+            Employee.saveEmpId();
         } catch (IOException ex) {
             Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -2041,22 +2052,28 @@ public class MainPage extends javax.swing.JFrame {
 
     private void editEmployeebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEmployeebtnActionPerformed
         // TODO add your handling code here:
-        int row = empTableList.getSelectedRow();
+
         String gender;
         if (empTableList.getSelectedRow() < 0) {
             PopupMessage("Please select an Employee from the list");
         } else {
-            if ("male".equalsIgnoreCase(GymSystem.getEmployeesList().get(row).getGender())) {
+            Employee emp = empFindByID();
+
+            if ("male".equalsIgnoreCase(emp.getGender())) {
                 EmpMaleEditbtn.setSelected(true);
             } else {
                 EmpFemaleEditbtn.setSelected(true);
             }
-            txtFirstNameEmpEdit.setText(GymSystem.getEmployeesList().get(row).getFirstName());
-            txtSurnameEmpEdit.setText(GymSystem.getEmployeesList().get(row).getSurname());
-            txtAddressEmpEdit.setText(GymSystem.getEmployeesList().get(row).getAddress());
-            txtSalaryEmpEdit.setText(GymSystem.getEmployeesList().get(row).getSalary());
-            txtPhoneNumberEmpEdit.setText(GymSystem.getEmployeesList().get(row).getPhone());
-
+            txtFirstNameEmpEdit.setText(emp.getFirstName());
+            txtSurnameEmpEdit.setText(emp.getSurname());
+            txtAddressEmpEdit.setText(emp.getAddress());
+            txtSalaryEmpEdit.setText(emp.getSalary());
+            txtPhoneNumberEmpEdit.setText(emp.getPhone());
+            if (emp instanceof PersonalTrainer) {
+                TrainerEmpEditbtn.setSelected(true);
+            } else {
+                RegularEmpEditbtn.setSelected(true);
+            }
             cardLayout.show(pnlCards, "editEmployeePnl");
         }
 
@@ -2065,11 +2082,11 @@ public class MainPage extends javax.swing.JFrame {
 
     private void deletebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebtnActionPerformed
         // TODO add your handling code here:
-        int row = empTableList.getSelectedRow();
+        Employee emp = empFindByID();
         if (empTableList.getSelectedRow() < 0) {
             PopupMessage("Please select an Employee from the list");
         } else {
-            GymSystem.getEmployeesList().remove(row);
+            GymSystem.getEmployeesList().remove(emp);
             try {
                 GymSystem.WriteEmployee();
             } catch (IOException ex) {
@@ -2108,12 +2125,78 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_EmpMaleEditbtnActionPerformed
 
-    private void AddEmpbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddEmpbtn1ActionPerformed
+    private void EditEmpbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditEmpbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_AddEmpbtn1ActionPerformed
+        final String[] txt = {"First Name", "Surname"};
+        final String[] all = {"First Name", "Surname", "Salary", "Address", "Phone Number"};
+
+        Employee emp = empFindByID();
+
+        ArrayList<TextField> txtfields = new ArrayList<>();
+        txtfields.add(txtFirstNameEmpEdit);
+        txtfields.add(txtSurnameEmpEdit);
+        txtfields.add(txtSalaryEmpEdit);
+        txtfields.add(txtAddressEmpEdit);
+        txtfields.add(txtPhoneNumberEmpEdit);
+
+        for (int i = 0; i < txtfields.size(); i++) {
+            if (!isfilled(txtfields.get(i), all[i])) {
+                return;
+            }
+        }
+
+        for (int i = 0; i < txt.length; i++) {
+            if (!containsOnlyLetters(txtfields.get(i), txt[i])) {
+                return;
+            }
+        }
+
+        if (!numbersOnly(txtSalaryEmpEdit)) {
+            return;
+        }
+
+        if (!numbersOnly(txtPhoneNumberEmpEdit)) {
+            return;
+        }
+
+        if (!EmpMaleEditbtn.isSelected() & !EmpFemaleEditbtn.isSelected()) {
+            PopupMessage("please choose a gender");
+            return;
+        }
+
+        if (!RegularEmpEditbtn.isSelected() & !TrainerEmpEditbtn.isSelected()) {
+            PopupMessage("please choose a Member type");
+            return;
+        }
+
+        String fname = txtFirstNameEmpEdit.getText();
+        String surname = txtSurnameEmpEdit.getText();
+        String salary = txtSalaryEmpEdit.getText();
+        String address = txtAddressEmpEdit.getText();
+        String phone = txtPhoneNumberEmpEdit.getText();
+        String gender = EmpMaleEditbtn.isSelected() ? "Male" : "Female";
+
+        emp.setFirstName(fname);
+        emp.setSurname(surname);
+        emp.setSalary(salary);
+        emp.setAddress(address);
+        emp.setPhone(phone);
+        emp.setGender(gender);
+
+        try {
+            GymSystem.WriteEmployee();
+        } catch (IOException ex) {
+            Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        PopupMessage("Employee Edited succesfully");
+        renderEmpTableData();
+        cardLayout.show(pnlCards, "manageEmployeesPnl");
+
+    }//GEN-LAST:event_EditEmpbtnActionPerformed
 
     private void CancelEmpbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelEmpbtn1ActionPerformed
         // TODO add your handling code here:
+        cardLayout.show(pnlCards, "manageEmployeesPnl");
     }//GEN-LAST:event_CancelEmpbtn1ActionPerformed
 
     private void Cancelbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cancelbtn1ActionPerformed
@@ -2122,6 +2205,105 @@ public class MainPage extends javax.swing.JFrame {
 
     private void Addbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Addbtn1ActionPerformed
         // TODO add your handling code here:
+        Member mem = memberFindByID();
+
+        ArrayList<TextField> strtxtfields = new ArrayList<>();
+        strtxtfields.add(txtMemberFirstNameEdit);
+        strtxtfields.add(txtMemberSurnameEdit);
+        strtxtfields.add(txtMemberMajorOrPositionEdit);
+
+        ArrayList<TextField> alltxtfields = new ArrayList<>();
+        alltxtfields.add(txtMemberFirstNameEdit);
+        alltxtfields.add(txtMemberSurnameEdit);
+        alltxtfields.add(txtMemberPhoneNumberEdit);
+        alltxtfields.add(txtMemberAddressEdit);
+        alltxtfields.add(txtMemberDateEdit);
+        alltxtfields.add(txtMemberMajorOrPositionEdit);
+
+        ArrayList<String> txtStrAllList = new ArrayList<>();
+        txtStrAllList.add("First Name");
+        txtStrAllList.add("Surname");
+
+        ArrayList<String> txtAllList = new ArrayList<>();
+        txtAllList.add("First Name");
+        txtAllList.add("Surname");
+        txtAllList.add("Phone number");
+        txtAllList.add("Address");
+        txtAllList.add("Date of Birth");
+
+        if (mem instanceof PolytechnicStudent) {
+            txtStrAllList.add("Major");
+            txtAllList.add("Major");
+            for (int i = 0; i < alltxtfields.size(); i++) {
+                if (!isfilled(alltxtfields.get(i), txtAllList.get(i))) {
+                    return;
+                }
+            }
+            for (int i = 0; i < strtxtfields.size(); i++) {
+                if (!containsOnlyLetters(strtxtfields.get(i), txtStrAllList.get(i))) {
+                    return;
+                }
+            }
+        } else {
+            txtStrAllList.add("Position");
+            txtStrAllList.add("Department");
+            txtAllList.add("Position");
+            txtAllList.add("Department");
+            strtxtfields.add(txtMemberSportTeamOrDepartmentEdit);
+            alltxtfields.add(txtMemberSportTeamOrDepartmentEdit);
+            for (int i = 0; i < alltxtfields.size(); i++) {
+                if (!isfilled(alltxtfields.get(i), txtAllList.get(i))) {
+                    return;
+                }
+            }
+            for (int i = 0; i < strtxtfields.size(); i++) {
+                if (!containsOnlyLetters(strtxtfields.get(i), txtStrAllList.get(i))) {
+                    return;
+                }
+            }
+        }
+
+        if (!numbersOnly(txtMemberPhoneNumberEdit)) {
+            return;
+        }
+
+        if (!memberMaleEditbtn.isSelected() & !memberFemaleEditbtn.isSelected()) {
+            PopupMessage("please choose a gender");
+            return;
+        }
+
+        String fname = txtMemberFirstNameEdit.getText();
+        String surname = txtMemberSurnameEdit.getText();
+        String phone = txtMemberPhoneNumberEdit.getText();
+        String address = txtMemberAddressEdit.getText();
+        String date = txtMemberDateEdit.getText();
+        String MajOrPos = txtMemberMajorOrPositionEdit.getText();
+        String teamDep = txtMemberSportTeamOrDepartmentEdit.getText();
+
+        String gender = memberFemaleEditbtn.isSelected() ? "Female" : "Male";
+        mem.setFirstName(fname);
+        mem.setSurname(surname);
+        mem.setPhone(phone);
+        mem.setBirthDate(date);
+        mem.setAddress(address);
+        mem.setGender(gender);
+
+        if (mem instanceof PolytechnicStudent) {
+            ((PolytechnicStudent) mem).setMajor(MajOrPos);
+            ((PolytechnicStudent) mem).setTeam(teamDep);
+        } else {
+            ((PolytechnicStaff) mem).setDepartment(teamDep);
+            ((PolytechnicStaff) mem).setPosition(MajOrPos);
+        }
+        try {
+            GymSystem.WriteMember();
+        } catch (IOException ex) {
+            Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        PopupMessage("Member data edited succesfully");
+        renderMemberTableData();
+        cardLayout.show(pnlCards, "manageMembersPnl");
     }//GEN-LAST:event_Addbtn1ActionPerformed
 
     private void txtMemberPhoneNumberEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMemberPhoneNumberEditActionPerformed
@@ -2172,63 +2354,54 @@ public class MainPage extends javax.swing.JFrame {
 
     private void PickDatebtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PickDatebtn1ActionPerformed
         // TODO add your handling code here:
+        dateChooser1.showPopup();
     }//GEN-LAST:event_PickDatebtn1ActionPerformed
 
     private void editMemberbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editMemberbtnActionPerformed
         // TODO add your handling code here:
-
-        int row = memberTableList.getSelectedRow();
-        String gender;
-        int found;
-        Object id;
-
-        if (row < 0) {
+        if (memberTableList.getSelectedRow() < 0) {
             PopupMessage("Please select a member from the list");
         } else {
-            id = memberTableList.getModel().getValueAt(row, 0);
-            String idString = id.toString();
-            int idInt = Integer.parseInt(idString);
-
-            for (int i = 0; i < GymSystem.getMembersList().size(); i++) {
-                if (GymSystem.getMembersList().get(i).getId() == idInt) {
-                    if ("male".equalsIgnoreCase(GymSystem.getMembersList().get(i).getGender())) {
-                        memberMaleEditbtn.setSelected(true);
-                    } else {
-                        memberFemaleEditbtn.setSelected(true);
-                    }
-                    txtMemberFirstNameEdit.setText(GymSystem.getMembersList().get(i).getFirstName());
-                    txtMemberSurnameEdit.setText(GymSystem.getMembersList().get(i).getSurname());
-                    txtMemberAddressEdit.setText(GymSystem.getMembersList().get(i).getAddress());
-                    txtMemberPhoneNumberEdit.setText(GymSystem.getMembersList().get(i).getPhone());
-                    txtMemberDateEdit.setText(GymSystem.getMembersList().get(i).getBirthDate());
-                    if (GymSystem.getMembersList().get(i) instanceof PolytechnicStaff) {
-                        txtMemberMajorOrPositionEdit.setText(GymSystem.getMembersList().get(i).getPosition());
-                        txtMemberSportTeamOrDepartmentEdit.setText(GymSystem.getMembersList().get(i).getAddress());
-                        StaffEditbtn.setSelected(true);
-                        lblEditSportTeamOrDepartment.setText("Department");
-                        lblEditMajorOrPosition.setText("Position");
-                    } else {
-                        txtMemberMajorOrPositionEdit.setText(GymSystem.getMembersList().get(i).getMajor());
-                        txtMemberSportTeamOrDepartmentEdit.setText(GymSystem.getMembersList().get(i).getTeam());
-                        StudentEditbtn.setSelected(true);
-                        lblEditSportTeamOrDepartment.setText("Sport Team");
-                        lblEditMajorOrPosition.setText("Major");
-                    }
-                break;
-                }
+            Member mem = memberFindByID();
+            if ("male".equalsIgnoreCase(mem.getGender())) {
+                memberMaleEditbtn.setSelected(true);
+            } else {
+                memberFemaleEditbtn.setSelected(true);
             }
-
+            txtMemberFirstNameEdit.setText(mem.getFirstName());
+            txtMemberSurnameEdit.setText(mem.getSurname());
+            txtMemberAddressEdit.setText(mem.getAddress());
+            txtMemberPhoneNumberEdit.setText(mem.getPhone());
+            txtMemberDateEdit.setText(mem.getBirthDate());
+            if (mem instanceof PolytechnicStaff) {
+                txtMemberMajorOrPositionEdit.setText(mem.getPosition());
+                txtMemberSportTeamOrDepartmentEdit.setText(mem.getAddress());
+                StaffEditbtn.setSelected(true);
+                lblEditSportTeamOrDepartment.setText("Department");
+                lblEditMajorOrPosition.setText("Position");
+            } else {
+                txtMemberMajorOrPositionEdit.setText(mem.getMajor());
+                txtMemberSportTeamOrDepartmentEdit.setText(mem.getTeam());
+                StudentEditbtn.setSelected(true);
+                lblEditSportTeamOrDepartment.setText("Sport Team");
+                lblEditMajorOrPosition.setText("Major");
+            }
             cardLayout.show(pnlCards, "editMemberPnl");
         }
     }//GEN-LAST:event_editMemberbtnActionPerformed
 
     private void deletebtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebtn2ActionPerformed
         // TODO add your handling code here:
-        int row = memberTableList.getSelectedRow();
         if (memberTableList.getSelectedRow() < 0) {
             PopupMessage("Please select a Member from the list");
         } else {
-            GymSystem.getMembersList().remove(row);
+            Member mem = memberFindByID();
+            GymSystem.getMembersList().remove(mem);
+            try {
+                GymSystem.WriteMember();
+            } catch (IOException ex) {
+                Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
             renderMemberTableData();
         }
     }//GEN-LAST:event_deletebtn2ActionPerformed
@@ -2243,6 +2416,16 @@ public class MainPage extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_button2ActionPerformed
+
+    private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
+        // TODO add your handling code here:
+        String input = employeeSearchtxt.getText();
+        if (input != null) {
+            renderFilteredEmpTableData(input);
+        } else {
+            renderEmpTableData();
+        }
+    }//GEN-LAST:event_button3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2288,13 +2471,13 @@ public class MainPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.Button AddEmpbtn;
-    private GUI.Button AddEmpbtn1;
     private GUI.Button Addbtn;
     private GUI.Button Addbtn1;
     private GUI.Button CancelEmpbtn;
     private GUI.Button CancelEmpbtn1;
     private GUI.Button Cancelbtn;
     private GUI.Button Cancelbtn1;
+    private GUI.Button EditEmpbtn;
     private GUI.RadioButtonCustom EmpFemaleEditbtn;
     private GUI.RadioButtonCustom EmpFemalebtn;
     private javax.swing.ButtonGroup EmpGenderButtonGroup;
@@ -2320,11 +2503,12 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JButton addMemberButton;
     private javax.swing.JPanel addMemberPnl;
     private javax.swing.JButton assignTrainerButton;
-    private GUI.Button button1;
     private GUI.Button button2;
+    private GUI.Button button3;
     private javax.swing.JButton dashboardButton;
     private javax.swing.JPanel dashboardPnl;
     private GUI.datechooser.DateChooser dateChooser;
+    private GUI.datechooser.DateChooser dateChooser1;
     private GUI.Button deletebtn;
     private GUI.Button deletebtn2;
     private javax.swing.JPanel editEmployeePnl;
@@ -2333,6 +2517,7 @@ public class MainPage extends javax.swing.JFrame {
     private GUI.Button editMemberbtn;
     private javax.swing.JLabel emoployeeSectionLabel;
     private GUI.List.Table empTableList;
+    private GUI.TextField employeeSearchtxt;
     private javax.swing.ButtonGroup employeeTypeButtonGroup;
     private GUI.RadioButtonCustom femalebtn;
     private javax.swing.JLabel jLabel1;
@@ -2397,7 +2582,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.ButtonGroup memberTypeGroupButton;
     private javax.swing.JPanel nvigPnl;
     private javax.swing.JPanel pnlCards;
-    private GUI.TextField textField1;
     private GUI.TextField txtAddressEmpEdit;
     private GUI.TextField txtAddressEmpInput;
     private GUI.TextField txtFirstNameEmpEdit;
@@ -2553,12 +2737,12 @@ public class MainPage extends javax.swing.JFrame {
     public void renderEmpTableData() {
         DefaultTableModel tableModel = (DefaultTableModel) empTableList.getModel();
         tableModel.setRowCount(0);
-        for (int i = 0; i < GymSystem.getEmployeesList().size(); i++) {
-            String type = GymSystem.getEmployeesList().get(i) instanceof PersonalTrainer ? "Trainer" : "Regular";
-            int id = GymSystem.getEmployeesList().get(i).getId();
-            String name = GymSystem.getEmployeesList().get(i).getFullName();
-            String address = GymSystem.getEmployeesList().get(i).getAddress();
-            String phone = GymSystem.getEmployeesList().get(i).getPhone();
+        for (Employee emp : GymSystem.getEmployeesList()) {
+            String type = emp instanceof PersonalTrainer ? "Trainer" : "Regular";
+            int id = emp.getId();
+            String name = emp.getFullName();
+            String address = emp.getAddress();
+            String phone = emp.getPhone();
             empTableList.addRow(new Object[]{id, name, address, phone, type});
         }
     }
@@ -2566,12 +2750,12 @@ public class MainPage extends javax.swing.JFrame {
     public void renderFilteredEmpTableData(String s) {
         DefaultTableModel tableModel = (DefaultTableModel) empTableList.getModel();
         tableModel.setRowCount(0);
-        for (int i = 0; i < GymSystem.getEmployeesList().size(); i++) {
-            String type = GymSystem.getEmployeesList().get(i) instanceof PersonalTrainer ? "Trainer" : "Regular";
-            int id = GymSystem.getEmployeesList().get(i).getId();
-            String name = GymSystem.getEmployeesList().get(i).getFullName();
-            String address = GymSystem.getEmployeesList().get(i).getAddress();
-            String phone = GymSystem.getEmployeesList().get(i).getPhone();
+        for (Employee emp : GymSystem.getEmployeesList()) {
+            String type = emp instanceof PersonalTrainer ? "Trainer" : "Regular";
+            int id = emp.getId();
+            String name = emp.getFullName();
+            String address = emp.getAddress();
+            String phone = emp.getPhone();
 
             if (s.equalsIgnoreCase(String.valueOf(id)) || name.toLowerCase().contains(s.toLowerCase())) {
                 empTableList.addRow(new Object[]{id, name, address, phone, type});
@@ -2583,13 +2767,12 @@ public class MainPage extends javax.swing.JFrame {
     public void renderMemberTableData() {
         DefaultTableModel tableModel = (DefaultTableModel) memberTableList.getModel();
         tableModel.setRowCount(0);
-        for (int i = 0; i < GymSystem.getMembersList().size(); i++) {
-
-            String type = GymSystem.getMembersList().get(i) instanceof PolytechnicStaff ? "Staff" : "Student";
-            int id = GymSystem.getMembersList().get(i).getId();
-            String name = GymSystem.getMembersList().get(i).getFullName();
-            String address = GymSystem.getMembersList().get(i).getAddress();
-            String phone = GymSystem.getMembersList().get(i).getPhone();
+        for (Member mem : GymSystem.getMembersList()) {
+            String type = mem instanceof PolytechnicStaff ? "Staff" : "Student";
+            int id = mem.getId();
+            String name = mem.getFullName();
+            String address = mem.getAddress();
+            String phone = mem.getPhone();
             memberTableList.addRow(new Object[]{id, name, address, phone, type});
         }
     }
@@ -2597,19 +2780,43 @@ public class MainPage extends javax.swing.JFrame {
     public void renderFilteredMemberTableData(String s) {
         DefaultTableModel tableModel = (DefaultTableModel) memberTableList.getModel();
         tableModel.setRowCount(0);
-        for (int i = 0; i < GymSystem.getMembersList().size(); i++) {
-
-            String type = GymSystem.getMembersList().get(i) instanceof PolytechnicStaff ? "Staff" : "Student";
-            int id = GymSystem.getMembersList().get(i).getId();
-            String name = GymSystem.getMembersList().get(i).getFullName();
-            String address = GymSystem.getMembersList().get(i).getAddress();
-            String phone = GymSystem.getMembersList().get(i).getPhone();
-
+        for (Member mem : GymSystem.getMembersList()) {
+            String type = mem instanceof PolytechnicStaff ? "Staff" : "Student";
+            int id = mem.getId();
+            String name = mem.getFullName();
+            String address = mem.getAddress();
+            String phone = mem.getPhone();
             if (s.equalsIgnoreCase(String.valueOf(id)) || name.toLowerCase().contains(s.toLowerCase())) {
                 memberTableList.addRow(new Object[]{id, name, address, phone, type});
             }
 
         }
+    }
+
+    public Employee empFindByID() {
+        int row = empTableList.getSelectedRow();
+        Object id = empTableList.getModel().getValueAt(row, 0);
+        String idString = id.toString();
+        int idFound = Integer.parseInt(idString);
+        for (Employee emp : GymSystem.getEmployeesList()) {
+            if (emp.getId() == idFound) {
+                return emp;
+            }
+        }
+        return null;
+    }
+
+    public Member memberFindByID() {
+        int row = memberTableList.getSelectedRow();
+        Object id = memberTableList.getModel().getValueAt(row, 0);
+        String idString = id.toString();
+        int idFound = Integer.parseInt(idString);
+        for (Member mem : GymSystem.getMembersList()) {
+            if (mem.getId() == idFound) {
+                return mem;
+            }
+        }
+        return null;
     }
 
 }

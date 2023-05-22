@@ -1,5 +1,9 @@
 package Logic;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.Serializable;
 
 public class Member implements Serializable {
@@ -106,5 +110,28 @@ public class Member implements Serializable {
     public String getTeam() {
         return "";
     }
+    
+    public static void saveMemberId() {
+        try {
+            FileWriter fw = new FileWriter("src/Save/memId.txt");
+            fw.write(String.valueOf(counter));
+            fw.close();
+        } catch (IOException e) {
+            System.out.println("Error occured: " + e.getMessage());
+        }
+    }
+
+    public static void loadMemberId() {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("src/Save/memId.txt"));
+            counter = Integer.parseInt(br.readLine());
+            br.close();
+        } catch (IOException e) {
+            counter = 1;
+            System.out.println("Error occured: " + e.getMessage());
+        }
+    }
+    
+    
 
 }

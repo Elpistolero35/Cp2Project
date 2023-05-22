@@ -49,7 +49,7 @@ public class GymSystem {
         }
     }
 
-    public void WriteMember() throws IOException {
+    public static void WriteMember() throws IOException {
         try ( FileOutputStream fileOut = new FileOutputStream("src/Save/Members.dat")) {
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(GymSystem.getMembersList());
@@ -58,7 +58,7 @@ public class GymSystem {
         }
     }
 
-    public void ReadMembers() throws IOException, ClassNotFoundException {
+    public static void ReadMembers() throws IOException, ClassNotFoundException {
         try {
             FileInputStream fileIn = new FileInputStream("src/Save/Members.dat");
             ObjectInputStream in = new ObjectInputStream(fileIn);

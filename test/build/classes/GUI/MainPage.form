@@ -15,6 +15,13 @@
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="dateChooser.setTextRefernce(txtMemberDateInput);"/>
       </AuxValues>
     </Component>
+    <Component class="GUI.datechooser.DateChooser" name="dateChooser1">
+      <Properties>
+        <Property name="textRefernce" type="javax.swing.JTextField" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="txtMemberDateEdit"/>
+        </Property>
+      </Properties>
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -336,33 +343,15 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="293" max="-2" attributes="0"/>
-                          <Component id="button1" min="-2" pref="122" max="-2" attributes="0"/>
-                          <EmptySpace pref="464" max="32767" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="0" pref="879" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="310" max="32767" attributes="0"/>
-                          <Component id="button1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="244" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="0" pref="584" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
-              <SubComponents>
-                <Component class="GUI.Button" name="button1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="button1"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button1ActionPerformed"/>
-                  </Events>
-                </Component>
-              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="addEmployeePnl">
               <Properties>
@@ -1247,15 +1236,17 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="jScrollPane2" min="-2" pref="750" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="29" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="textField1" min="-2" pref="204" max="-2" attributes="0"/>
-                                      <EmptySpace pref="298" max="32767" attributes="0"/>
+                                      <Component id="employeeSearchtxt" min="-2" pref="204" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="button3" min="-2" pref="59" max="-2" attributes="0"/>
+                                      <EmptySpace pref="248" max="32767" attributes="0"/>
                                       <Component id="editEmployeebtn" min="-2" pref="103" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                       <Component id="deletebtn" min="-2" pref="103" max="-2" attributes="0"/>
-                                      <EmptySpace pref="42" max="32767" attributes="0"/>
+                                      <EmptySpace pref="27" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1265,10 +1256,13 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="textField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="editEmployeebtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="deletebtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="employeeSearchtxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="editEmployeebtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deletebtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="button3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jScrollPane2" min="-2" pref="382" max="-2" attributes="0"/>
@@ -1284,6 +1278,9 @@
                       <SubComponents>
                         <Component class="GUI.List.Table" name="empTableList">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="5" rowCount="0">
                                 <Column editable="false" title="ID" type="java.lang.String"/>
@@ -1331,7 +1328,18 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="GUI.TextField" name="textField1">
+                    <Component class="GUI.Button" name="button3">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/GUI/images/searchIcon.png"/>
+                        </Property>
+                        <Property name="focusable" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button3ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="GUI.TextField" name="employeeSearchtxt">
                     </Component>
                     <Component class="GUI.Button" name="editEmployeebtn">
                       <Properties>
@@ -1431,7 +1439,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="memberSearchtxt" min="-2" pref="204" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="button2" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="button2" min="-2" pref="56" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="editMemberbtn" min="-2" pref="103" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
@@ -1447,11 +1455,13 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="memberSearchtxt" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Component id="editMemberbtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="deletebtn2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="button2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="memberSearchtxt" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                      <Component id="editMemberbtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="deletebtn2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jScrollPane4" min="-2" pref="373" max="-2" attributes="0"/>
@@ -1462,6 +1472,11 @@
                   </Layout>
                   <SubComponents>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                      </Properties>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
@@ -1557,6 +1572,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/GUI/images/searchIcon.png"/>
                         </Property>
+                        <Property name="focusable" type="boolean" value="false"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button2ActionPerformed"/>
@@ -1584,19 +1600,19 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                           <Component id="jPanel5" pref="848" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           <Component id="jPanel5" pref="500" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1620,7 +1636,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace pref="275" max="32767" attributes="0"/>
-                              <Component id="AddEmpbtn1" min="-2" pref="76" max="-2" attributes="0"/>
+                              <Component id="EditEmpbtn" min="-2" pref="76" max="-2" attributes="0"/>
                               <EmptySpace pref="145" max="32767" attributes="0"/>
                               <Component id="CancelEmpbtn1" min="-2" pref="76" max="-2" attributes="0"/>
                               <EmptySpace pref="276" max="32767" attributes="0"/>
@@ -1718,7 +1734,7 @@
                               <Component id="txtSalaryEmpEdit" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="69" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="AddEmpbtn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="EditEmpbtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="CancelEmpbtn1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
@@ -1822,6 +1838,7 @@
                           <ComponentRef name="employeeTypeButtonGroup"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Regular"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                         <Property name="focusable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
@@ -1855,10 +1872,11 @@
                           <ComponentRef name="employeeTypeButtonGroup"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Trainer"/>
+                        <Property name="enabled" type="boolean" value="false"/>
                         <Property name="focusable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
-                    <Component class="GUI.Button" name="AddEmpbtn1">
+                    <Component class="GUI.Button" name="EditEmpbtn">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="8c" green="8f" red="0" type="rgb"/>
@@ -1870,7 +1888,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddEmpbtn1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EditEmpbtnActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="GUI.Button" name="CancelEmpbtn1">
@@ -2363,9 +2381,6 @@
                           </Events>
                         </Component>
                         <Component class="GUI.TextField" name="txtMemberDateEdit">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value=" "/>
-                          </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMemberDateEditActionPerformed"/>
                           </Events>
