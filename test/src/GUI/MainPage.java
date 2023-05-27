@@ -27,6 +27,11 @@ public class MainPage extends javax.swing.JFrame {
      */
     CardLayout cardLayout;
 
+    /**
+ * Initializes the MainPage GUI components, loads member and employee IDs,
+ * and updates the tables and labels.
+ * @author Ali Fardan
+ */
     public MainPage() throws IOException, ClassNotFoundException {
         initComponents();
         Member.loadMemberId();
@@ -34,8 +39,7 @@ public class MainPage extends javax.swing.JFrame {
         GymSystem.loadStartupFile();
         Member.saveMemberId();
         Employee.saveEmpId();
-        
-        
+
         empTableList.fixTable(jScrollPane2);
         memberTableList.fixTable(jScrollPane4);
         memberTableList1.fixTable(jScrollPane5);
@@ -95,7 +99,7 @@ public class MainPage extends javax.swing.JFrame {
         manageMembersButton = new javax.swing.JButton();
         assignTrainerButton = new javax.swing.JButton();
         dashboardButton = new javax.swing.JButton();
-        jLabel35 = new javax.swing.JLabel();
+        exitbtn = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         assignTrainerButton1 = new javax.swing.JButton();
         pnlCards = new javax.swing.JPanel();
@@ -373,10 +377,10 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/images/log-out.png"))); // NOI18N
-        jLabel35.addMouseListener(new java.awt.event.MouseAdapter() {
+        exitbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/images/log-out.png"))); // NOI18N
+        exitbtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jLabel35MouseReleased(evt);
+                exitbtnMouseReleased(evt);
             }
         });
 
@@ -410,7 +414,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addGroup(nvigPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(nvigPnlLayout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addComponent(jLabel35)
+                        .addComponent(exitbtn)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(nvigPnlLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -451,7 +455,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(assignTrainerButton)
                 .addGap(74, 74, 74)
-                .addComponent(jLabel35)
+                .addComponent(exitbtn)
                 .addGap(19, 19, 19))
         );
 
@@ -2508,6 +2512,12 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtMemberPhoneNumberInputActionPerformed
 
+    /**
+ * Adds a new member (either a student or a staff member) to the gym management system, validates the input fields, and updates the system.
+ *
+ * @param evt The ActionEvent that triggers this method.
+ * @author Ali Fardan
+ */
     private void AddbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddbtnActionPerformed
 
         ArrayList<String> txtStrAllList = new ArrayList<>();
@@ -2588,7 +2598,6 @@ public class MainPage extends javax.swing.JFrame {
         clearTextFields(addMemberAllTxt());
         MembersGenderButtonGroup.clearSelection();
         PopupMessage("Member user had been created");
-
     }//GEN-LAST:event_AddbtnActionPerformed
 
     private void CancelbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelbtnActionPerformed
@@ -2601,6 +2610,12 @@ public class MainPage extends javax.swing.JFrame {
         dateChooserAddPnl.showPopup();
     }//GEN-LAST:event_PickDatebtnActionPerformed
 
+    /**
+ * Adds a new employee to the gym management system, validates the input fields, and updates the system.
+ *
+ * @param evt The ActionEvent that triggers this method.
+ * @author Ali Fardan
+ */
     private void AddEmpbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddEmpbtnActionPerformed
         // TODO add your handling code here:
         final String[] txt = {"First Name", "Surname"};
@@ -2660,7 +2675,6 @@ public class MainPage extends javax.swing.JFrame {
         EmpGenderButtonGroup.clearSelection();
         employeeTypeButtonGroup.clearSelection();
         PopupMessage("Employee added succesfuly");
-
     }//GEN-LAST:event_AddEmpbtnActionPerformed
 
     private void CancelEmpbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelEmpbtnActionPerformed
@@ -2678,10 +2692,15 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_EmpFemalebtnActionPerformed
 
+    /**
+     * Populates the input fields with the selected employee's information in
+     * the gym management system and navigates to the edit employee panel.
+     *
+     * @param evt The ActionEvent that triggers this method.
+     * @author Ali Fardan
+     */
     private void editEmployeebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEmployeebtnActionPerformed
         // TODO add your handling code here:
-
-        String gender;
         if (empTableList.getSelectedRow() < 0) {
             PopupMessage("Please select an Employee from the list");
         } else {
@@ -2704,10 +2723,15 @@ public class MainPage extends javax.swing.JFrame {
             }
             cardLayout.show(pnlCards, "editEmployeePnl");
         }
-
-
     }//GEN-LAST:event_editEmployeebtnActionPerformed
 
+    /**
+     * Deletes a selected employee from the gym management system and updates
+     * the system.
+     *
+     * @param evt The ActionEvent that triggers this method.
+     * @author Ali Fardan
+     */
     private void deletebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebtnActionPerformed
         // TODO add your handling code here:
 
@@ -2723,7 +2747,6 @@ public class MainPage extends javax.swing.JFrame {
             }
             renderEmpTableData();
         }
-
     }//GEN-LAST:event_deletebtnActionPerformed
 
     private void txtPhoneNumberEmpEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneNumberEmpEditActionPerformed
@@ -2754,6 +2777,13 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_EmpMaleEditbtnActionPerformed
 
+    /**
+     * Edits the information of a selected employee in the gym management
+     * system, validates the input fields, and updates the system.
+     *
+     * @param evt The ActionEvent that triggers this method.
+     * @author Ali Fardan
+     */
     private void EditEmpbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditEmpbtnActionPerformed
         // TODO add your handling code here:
         final String[] txt = {"First Name", "Surname"};
@@ -2833,6 +2863,13 @@ public class MainPage extends javax.swing.JFrame {
         cardLayout.show(pnlCards, "manageMembersPnl");
     }//GEN-LAST:event_Cancelbtn1ActionPerformed
 
+    /**
+     * Adds a new member to the gym management system, validates the input
+     * fields, and updates the system.
+     *
+     * @param evt The ActionEvent that triggers this method.
+     * @author Ali Fardan
+     */
     private void Addbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Addbtn1ActionPerformed
         // TODO add your handling code here:
         Member mem = memberFindByID();
@@ -2987,6 +3024,13 @@ public class MainPage extends javax.swing.JFrame {
         dateChooserEditPnl.showPopup();
     }//GEN-LAST:event_PickDatebtn1ActionPerformed
 
+    /**
+     * Edits the information of a selected member in the gym management system
+     * and updates the input fields accordingly.
+     *
+     * @param evt The ActionEvent that triggers this method.
+     * @author Ali Fardan
+     */
     private void editMemberbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editMemberbtnActionPerformed
         // TODO add your handling code here:
         if (memberTableList.getSelectedRow() < 0) {
@@ -3020,6 +3064,13 @@ public class MainPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_editMemberbtnActionPerformed
 
+    /**
+     * Deletes a member from the gym management system and updates the member
+     * list.
+     *
+     * @param evt The ActionEvent that triggers this method.
+     * @author Ali Fardan
+     */
     private void deletebtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebtn2ActionPerformed
         // TODO add your handling code here:
         if (memberTableList.getSelectedRow() < 0) {
@@ -3057,6 +3108,13 @@ public class MainPage extends javax.swing.JFrame {
         renderAssignTableData(memberSearchtxt1.getText());
     }//GEN-LAST:event_searchAssigenedTrainerbtnActionPerformed
 
+    /**
+     * Selects an assigned personal trainer for a member and updates the UI
+     * components accordingly.
+     *
+     * @param evt The ActionEvent that triggers this method.
+     * @author Ali Fardan
+     */
     private void selectAssigenedTrainerbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectAssigenedTrainerbtnActionPerformed
         // TODO add your handling code here:
         trainersListcombo.removeAllItems();
@@ -3103,6 +3161,13 @@ public class MainPage extends javax.swing.JFrame {
         cardLayout.show(pnlCards, "assignTrainer");
     }//GEN-LAST:event_CancelEmpbtn2ActionPerformed
 
+    /**
+     * Assigns a personal trainer to a member or swaps the existing trainer with
+     * a new one.
+     *
+     * @param evt The ActionEvent that triggers this method.
+     * @author Ali Fardan
+     */
     private void assignTrainerbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignTrainerbtnActionPerformed
         // TODO add your handling code here:
         Member mem = assignMemberFindByID();
@@ -3151,13 +3216,17 @@ public class MainPage extends javax.swing.JFrame {
 
     private void trainersListcomboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trainersListcomboActionPerformed
 
-
     }//GEN-LAST:event_trainersListcomboActionPerformed
 
-    private void jLabel35MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel35MouseReleased
-        // TODO add your handling code here:
+    private void exitbtnMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitbtnMouseReleased
+        try {
+            GymSystem.WriteEmployee();
+            GymSystem.WriteMember();
+        } catch (IOException ex) {
+            Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
         System.exit(0);
-    }//GEN-LAST:event_jLabel35MouseReleased
+    }//GEN-LAST:event_exitbtnMouseReleased
 
     private void searchAssigenedTrainerbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAssigenedTrainerbtn1ActionPerformed
         // TODO add your handling code here:
@@ -3293,6 +3362,7 @@ public class MainPage extends javax.swing.JFrame {
     private GUI.List.Table empTableList;
     private GUI.TextField employeeSearchtxt;
     private javax.swing.ButtonGroup employeeTypeButtonGroup;
+    private javax.swing.JLabel exitbtn;
     private GUI.RadioButtonCustom femalebtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -3322,7 +3392,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
@@ -3416,6 +3485,16 @@ public class MainPage extends javax.swing.JFrame {
     private GUI.TextField txtSurnameEmpInput;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Checks if the input TextField is filled with a non-empty value.
+     *
+     * @param textField The TextField component containing the input value.
+     * @param error The error type to be checked, such as "position",
+     * "department", or "major".
+     * @return Returns true if the input TextField is filled, otherwise returns
+     * false.
+     * @author Ali Fardan
+     */
     public boolean isfilled(TextField textField, String error) {
         final Color DefaultC = new Color(170, 170, 170);
         final Color ErrorC = new Color(250, 0, 0);
@@ -3431,24 +3510,17 @@ public class MainPage extends javax.swing.JFrame {
         return true;
     }
 
-//    public boolean containsOnlyLetters(TextField textField, String error) {
-//        final Color DefaultC = new Color(170, 170, 170);
-//        final Color ErrorC = new Color(250, 0, 0);
-//        textField.setShadowColor(DefaultC);
-//        String str = textField.getText();
-//        boolean found = false;
-//
-//        for (char c : str.toCharArray()) {
-//            if (!Character.isLetter(c) && found == false) {
-//                PopupMessage("Please follow the right cardinalities for " + error);
-//                found = true;
-//                textField.requestFocus();
-//                textField.setShadowColor(ErrorC);
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
+    /**
+     * Checks if the input string contains only letters and whitespaces for
+     * specific error types.
+     *
+     * @param textField The TextField component containing the input string.
+     * @param error The error type to be checked, such as "position",
+     * "department", or "major".
+     * @return Returns true if the input string contains only letters and
+     * whitespaces, otherwise returns false.
+     * @author Ali Fardan
+     */
     public boolean containsOnlyLetters(TextField textField, String error) {
         final Color DefaultC = new Color(170, 170, 170);
         final Color ErrorC = new Color(250, 0, 0);
@@ -3492,6 +3564,12 @@ public class MainPage extends javax.swing.JFrame {
         return true;
     }
 
+    /**
+     * Displays a popup message with the given error message.
+     *
+     * @param error The error message to display in the popup.
+     * @author Ali Fardan
+     */
     public static void PopupMessage(String error) {
         Message obj = new Message();
         obj.SetLabel(error);
@@ -3504,6 +3582,13 @@ public class MainPage extends javax.swing.JFrame {
         GlassPanePopup.showPopup(obj);
     }
 
+    /**
+     * Validates whether the input in the given TextField contains only numbers.
+     *
+     * @param textField The TextField to validate.
+     * @return true if the input contains only numbers, false otherwise.
+     * @author Ali Fardan
+     */
     public boolean numbersOnly(TextField textField) {
         String input = textField.getText();
         final String allowedChars = "0123456789.";
@@ -3524,6 +3609,14 @@ public class MainPage extends javax.swing.JFrame {
         return true;
     }
 
+    /**
+     * Clears the text of all input fields in the provided ArrayList of
+     * TextFields.
+     *
+     * @param textFields An ArrayList of TextFields containing the input fields
+     * to be cleared.
+     * @author Ali Fardan
+     */
     public void clearTextFields(ArrayList<TextField> textFields) {
         final Color DefaultC = new Color(170, 170, 170);
         for (TextField textField : textFields) {
@@ -3532,6 +3625,15 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Returns an ArrayList of TextFields representing the input fields for all
+     * student member details.
+     *
+     * @return An ArrayList of TextFields containing the member's first name,
+     * last name, phone number, address, date, major or position input fields,
+     * and sport team or department input fields.
+     * @author Ali Rasul
+     */
     public ArrayList<TextField> addMemberAllTxt() {
         ArrayList<TextField> addMemberTxt = new ArrayList<>();
         addMemberTxt.add(txtMemberFirstNameInput);
@@ -3545,6 +3647,15 @@ public class MainPage extends javax.swing.JFrame {
         return addMemberTxt;
     }
 
+    /**
+     * Returns an ArrayList of TextFields representing the input fields for
+     * student member details.
+     *
+     * @return An ArrayList of TextFields containing the member's first name,
+     * last name, major or position input fields, and sport team or department
+     * input fields.
+     * @author Ali Rasul
+     */
     public ArrayList<TextField> addMemberStrTxt() {
         ArrayList<TextField> addMemberTxt = new ArrayList<>();
         addMemberTxt.add(txtMemberFirstNameInput);
@@ -3555,6 +3666,14 @@ public class MainPage extends javax.swing.JFrame {
         return addMemberTxt;
     }
 
+    /**
+     * Returns an ArrayList of TextFields representing the input fields for
+     * member student details.
+     *
+     * @return An ArrayList of TextFields containing the member's first name,
+     * last name, phone number, address, date, major or position input fields.
+     * @author Ali Rasul
+     */
     public ArrayList<TextField> addMemberStuAllTxt() {
         ArrayList<TextField> addMemberTxt = new ArrayList<>();
         addMemberTxt.add(txtMemberFirstNameInput);
@@ -3566,6 +3685,14 @@ public class MainPage extends javax.swing.JFrame {
         return addMemberTxt;
     }
 
+    /**
+     * Returns an ArrayList of TextFields representing the input fields for
+     * member student details.
+     *
+     * @return An ArrayList of TextFields containing the member's first name,
+     * last name, major or position input fields.
+     * @author Ali Rasul
+     */
     public ArrayList<TextField> addMemberStuStrTxt() {
         ArrayList<TextField> addMemberTxt = new ArrayList<>();
         addMemberTxt.add(txtMemberFirstNameInput);
@@ -3574,6 +3701,14 @@ public class MainPage extends javax.swing.JFrame {
         return addMemberTxt;
     }
 
+    /**
+     * Returns an ArrayList of TextFields representing the input fields for
+     * employee details.
+     *
+     * @return An ArrayList of TextFields containing the employee's first name,
+     * last name, salary, address, and phone number input fields.
+     * @author Ali Rasul
+     */
     public ArrayList<TextField> addEmployeeAllTxt() {
         ArrayList<TextField> addEmployeeTxt = new ArrayList<>();
         addEmployeeTxt.add(txtFirstNameEmpInput);
@@ -3584,6 +3719,10 @@ public class MainPage extends javax.swing.JFrame {
         return addEmployeeTxt;
     }
 
+    /**
+     * Renders the employee table data to the empTableList JTable.
+     * @author Ali Fardan
+     */
     public void renderEmpTableData() {
         DefaultTableModel tableModel = (DefaultTableModel) empTableList.getModel();
         tableModel.setRowCount(0);
@@ -3597,6 +3736,13 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Renders the filtered employee table data based on the provided search
+     * string.
+     *
+     * @param s the search string used to filter the data
+     * @author Ali Fardan
+     */
     public void renderFilteredEmpTableData(String s) {
         DefaultTableModel tableModel = (DefaultTableModel) empTableList.getModel();
         tableModel.setRowCount(0);
@@ -3614,6 +3760,11 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Renders the member table data.
+     *
+     * @author Ali Fardan
+     */
     public void renderMemberTableData() {
         DefaultTableModel tableModel = (DefaultTableModel) memberTableList.getModel();
         tableModel.setRowCount(0);
@@ -3627,6 +3778,13 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Renders the filtered member table data based on the provided search
+     * string.
+     *
+     * @param s the search string used to filter the data
+     * @author Ali Fardan
+     */
     public void renderFilteredMemberTableData(String s) {
         DefaultTableModel tableModel = (DefaultTableModel) memberTableList.getModel();
         tableModel.setRowCount(0);
@@ -3643,6 +3801,12 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Retrieves an Employee object with the specified ID from the empTableList.
+     *
+     * @return the Employee object with the specified ID or null if not found
+     * @author Ali Fardan
+     */
     public Employee empFindByID() {
         int row = empTableList.getSelectedRow();
         Object id = empTableList.getModel().getValueAt(row, 0);
@@ -3656,6 +3820,12 @@ public class MainPage extends javax.swing.JFrame {
         return null;
     }
 
+    /**
+     * Retrieves a Member object with the specified ID from the memberTableList.
+     *
+     * @return the Member object with the specified ID or null if not found
+     * @author Ali Fardan
+     */
     public Member memberFindByID() {
         int row = memberTableList.getSelectedRow();
         Object id = memberTableList.getModel().getValueAt(row, 0);
@@ -3669,6 +3839,13 @@ public class MainPage extends javax.swing.JFrame {
         return null;
     }
 
+    /**
+     * Retrieves a Member object with the specified ID from the
+     * memberTableList1.
+     *
+     * @return the Member object with the specified ID or null if not found
+     * @author Ali Fardan
+     */
     public Member assignMemberFindByID() {
         int row = memberTableList1.getSelectedRow();
         Object id = memberTableList1.getModel().getValueAt(row, 0);
@@ -3682,6 +3859,13 @@ public class MainPage extends javax.swing.JFrame {
         return null;
     }
 
+    /**
+     * Renders the data in the memberTableList1 JTable, displaying information
+     * about members and their assigned PersonalTrainer.
+     *
+     * @param s the search string to filter the members displayed in the table
+     * @author Ali Fardan
+     */
     public void renderAssignTableData(String s) {
         DefaultTableModel tableModel = (DefaultTableModel) memberTableList1.getModel();
         tableModel.setRowCount(0);
@@ -3714,6 +3898,13 @@ public class MainPage extends javax.swing.JFrame {
 
     }
 
+    /**
+     * Renders the filtered data in the trainerTableJTable, displaying
+     * information about PersonalTrainer instances.
+     *
+     * @param s the search string to filter the trainers displayed in the table
+     * @author Ali Fardan
+     */
     public void renderFilteredTrainerTableData(String s) {
         DefaultTableModel tableModel = (DefaultTableModel) trainerTableList.getModel();
         tableModel.setRowCount(0);
@@ -3730,6 +3921,13 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Renders the data in the memberTrainerTableData JTable, displaying
+     * information about members associated with the selected PersonalTrainer.
+     *
+     * @param s the search string to filter the members displayed in the table
+     * @author Ali Fardan
+     */
     public void renderMemberTrainerTableData(String s) {
         DefaultTableModel tableModel = (DefaultTableModel) trainerTableList1.getModel();
         tableModel.setRowCount(0);
@@ -3746,6 +3944,12 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Finds a PersonalTrainer instance by its ID in the list of employees.
+     * @return the PersonalTrainer instance with the specified ID, or null if
+     * not found
+     * @author Ali Fardan
+     */
     public Employee TrainerFindByID() {
         int row = trainerTableList.getSelectedRow();
         Object id = trainerTableList.getModel().getValueAt(row, 0);
@@ -3759,6 +3963,12 @@ public class MainPage extends javax.swing.JFrame {
         return null;
     }
 
+    /**
+     * Counts the number of PersonalTrainer instances in the list of employees.
+     *
+     * @return the count of PersonalTrainer instances
+     * @author Ali Fardan
+     */
     public int trainerscount() {
         int count = 0;
         for (Employee emp : GymSystem.getEmployeesList()) {

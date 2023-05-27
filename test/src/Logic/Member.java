@@ -111,6 +111,10 @@ public class Member implements Serializable {
         return "";
     }
     
+    /**
+ * Saves the current member ID to a file named "memId.txt" in the "src/Save" directory.
+ * @author Ali Fardan
+ */
     public static void saveMemberId() {
         try {
             FileWriter fw = new FileWriter("src/Save/memId.txt");
@@ -121,6 +125,11 @@ public class Member implements Serializable {
         }
     }
 
+    /**
+ * Loads the current member ID from the "memId.txt" file in the "src/Save" directory
+ * and assigns it to the counter variable.
+ * @author Ali Fardan
+ */
     public static void loadMemberId() {
         try {
             BufferedReader br = new BufferedReader(new FileReader("src/Save/memId.txt"));

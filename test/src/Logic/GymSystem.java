@@ -38,15 +38,28 @@ public class GymSystem {
         GymSystem.employeesList = employeesList;
     }
 
+    /**
+     * Writes employee data from the GymSystem.getEmployeesList() variable to a
+     * binary file named "Employees.dat" in the "src/Save" directory.
+     *
+     * @author Ali Fardan
+     */
     public static void WriteEmployee() throws IOException {
         try ( FileOutputStream fileOut = new FileOutputStream("src/Save/Employees.dat")) {
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(GymSystem.getEmployeesList()); // serializes​
+            out.writeObject(GymSystem.getEmployeesList());
         } catch (FileNotFoundException e) {
             System.out.println("Error occured: " + e.getMessage());
         }
     }
 
+    /**
+     * Reads employee data from a binary file named "Employees.dat" in the
+     * "src/Save" directory and sets the employeesList variable of the GymSystem
+     * class to the read data.
+     *
+     * @author Ali Fardan
+     */
     public static void ReadEmployees() throws IOException, ClassNotFoundException {
         try {
             FileInputStream fileIn = new FileInputStream("src/Save/Employees.dat");
@@ -58,6 +71,12 @@ public class GymSystem {
         }
     }
 
+    /**
+     * Writes the member data from the GymSystem.getMembersList() variable to a
+     * binary file named "Members.dat" in the "src/Save" directory.
+     *
+     * @author Ali Fardan
+     */
     public static void WriteMember() throws IOException {
         try ( FileOutputStream fileOut = new FileOutputStream("src/Save/Members.dat")) {
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -67,17 +86,29 @@ public class GymSystem {
         }
     }
 
+    /**
+     * Reads member data from a binary file named "Members.dat" in the
+     * "src/Save" directory and sets the membersList variable of the GymSystem
+     * class to the read data.
+     *
+     * @author Ali Fardan
+     */
     public static void ReadMembers() throws IOException, ClassNotFoundException {
         try {
             FileInputStream fileIn = new FileInputStream("src/Save/Members.dat");
             ObjectInputStream in = new ObjectInputStream(fileIn);
-
             GymSystem.setMembersList((ArrayList<Member>) in.readObject());
         } catch (FileNotFoundException e) {
             System.out.println("Error occured: " + e.getMessage());
         }
     }
 
+    /**
+     * Generates a marketing report for polytechnic staff and students and
+     * writes the report to a file named "marketingReport.txt".
+     *
+     * @author Noman
+     */
     public static void generateMarketingReport() {
         Path filePath = Paths.get("marketingReport.txt");
         Charset charset = StandardCharsets.UTF_8;
@@ -127,6 +158,12 @@ public class GymSystem {
         }
     }
 
+    /**
+     * Loads a startup file and populates the system with employee and member
+     * data if the "Members.dat" or "Employees.dat" files do not exist.
+     *
+     * @author Noman
+     */
     public static void loadStartupFile() throws FileNotFoundException, IOException, ClassNotFoundException {
         File memberFile = new File("src/Save/Members.dat");
         File employeeFile = new File("src/Save/Employees.dat");

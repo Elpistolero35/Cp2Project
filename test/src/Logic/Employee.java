@@ -6,7 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Serializable;
 
-public class Employee implements Serializable{
+public class Employee implements Serializable {
+
     private static final long serialVersionUID = 1L;
     private int id;
     private String firstName;
@@ -37,8 +38,6 @@ public class Employee implements Serializable{
         this.id = counter;
         counter++;
     }
-    
-    
 
     public void setGender(String gender) {
         this.gender = gender;
@@ -61,7 +60,6 @@ public class Employee implements Serializable{
     public String getFullName() {
         return firstName + " " + surname;
     }
-
 
     public String getFirstName() {
         return firstName;
@@ -102,9 +100,13 @@ public class Employee implements Serializable{
     public void setSalary(Double salary) {
         this.salary = salary;
     }
-    
-    
-    
+
+    /**
+     * Saves the current employee ID to a file named "empId.txt" in the
+     * "src/Save" directory.
+     *
+     * @author Ali Fardan
+     */
     public static void saveEmpId() {
         try {
             FileWriter fw = new FileWriter("src/Save/empId.txt");
@@ -115,6 +117,12 @@ public class Employee implements Serializable{
         }
     }
 
+    /**
+     * Loads the current employee ID from the "empId.txt" file in the "src/Save"
+     * directory and assigns it to the counter variable.
+     *
+     * @author Ali Fardan
+     */
     public static void loadEmpId() {
         try {
             BufferedReader br = new BufferedReader(new FileReader("src/Save/empId.txt"));
@@ -125,5 +133,5 @@ public class Employee implements Serializable{
             System.out.println("Error occured: " + e.getMessage());
         }
     }
-    
+
 }
