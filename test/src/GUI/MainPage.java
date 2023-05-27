@@ -426,7 +426,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(assignTrainerButton)
                 .addGap(35, 35, 35)
                 .addComponent(jLabel35)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         mainPage.setLeftComponent(nvigPnl);
@@ -759,9 +759,9 @@ public class MainPage extends javax.swing.JFrame {
         addEmployeePnlLayout.setVerticalGroup(
             addEmployeePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addEmployeePnlLayout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 515, Short.MAX_VALUE)
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         pnlCards.add(addEmployeePnl, "addEmployeePnl");
@@ -1052,13 +1052,13 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(jLabel15)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(10, Short.MAX_VALUE)
                 .addComponent(leftpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addComponent(RightPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(MiddlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Addbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1090,16 +1090,16 @@ public class MainPage extends javax.swing.JFrame {
         addMemberPnlLayout.setHorizontalGroup(
             addMemberPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addMemberPnlLayout.createSequentialGroup()
-                .addGap(0, 37, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 787, Short.MAX_VALUE)
-                .addGap(0, 55, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 805, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         addMemberPnlLayout.setVerticalGroup(
             addMemberPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addMemberPnlLayout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 519, Short.MAX_VALUE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pnlCards.add(addMemberPnl, "addMemberPnl");
@@ -1223,9 +1223,9 @@ public class MainPage extends javax.swing.JFrame {
         manageEmployeesPnlLayout.setVerticalGroup(
             manageEmployeesPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(manageEmployeesPnlLayout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
+                .addContainerGap(71, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         pnlCards.add(manageEmployeesPnl, "manageEmployeesPnl");
@@ -1312,7 +1312,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(memberSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(editMemberbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1348,9 +1348,9 @@ public class MainPage extends javax.swing.JFrame {
         manageMembersPnlLayout.setVerticalGroup(
             manageMembersPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(manageMembersPnlLayout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
+                .addContainerGap(71, Short.MAX_VALUE)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         pnlCards.add(manageMembersPnl, "manageMembersPnl");
@@ -1510,7 +1510,7 @@ public class MainPage extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addContainerGap(61, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1544,7 +1544,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSalaryEmpEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(EditEmpbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CancelEmpbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1564,7 +1564,7 @@ public class MainPage extends javax.swing.JFrame {
             editEmployeePnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editEmployeePnlLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
                 .addGap(43, 43, 43))
         );
 
@@ -1899,9 +1899,9 @@ public class MainPage extends javax.swing.JFrame {
         editMemberPnlLayout.setVerticalGroup(
             editMemberPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editMemberPnlLayout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, 519, Short.MAX_VALUE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pnlCards.add(editMemberPnl, "editMemberPnl");
@@ -1977,9 +1977,9 @@ public class MainPage extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(memberSearchtxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(searchAssigenedTrainerbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(351, 351, 351)
+                        .addGap(357, 357, 357)
                         .addComponent(selectAssigenedTrainerbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(39, Short.MAX_VALUE))
@@ -1987,14 +1987,15 @@ public class MainPage extends javax.swing.JFrame {
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(searchAssigenedTrainerbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(selectAssigenedTrainerbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(memberSearchtxt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(searchAssigenedTrainerbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(selectAssigenedTrainerbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(memberSearchtxt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
 
@@ -2003,16 +2004,16 @@ public class MainPage extends javax.swing.JFrame {
         assignTrainerLayout.setHorizontalGroup(
             assignTrainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(assignTrainerLayout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         assignTrainerLayout.setVerticalGroup(
             assignTrainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(assignTrainerLayout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
+                .addContainerGap(54, Short.MAX_VALUE)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pnlCards.add(assignTrainer, "assignTrainer");
@@ -2062,56 +2063,59 @@ public class MainPage extends javax.swing.JFrame {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel36)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(assignedMemtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
-                        .addComponent(jLabel43))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(267, 267, 267)
                         .addComponent(assignTrainerbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CancelEmpbtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(trainersListcombo, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                        .addGap(110, 110, 110)
+                        .addComponent(CancelEmpbtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap(213, Short.MAX_VALUE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel36)
+                            .addComponent(jLabel43))
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(assignedMemtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(trainersListcombo, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(135, 135, 135)
+                .addContainerGap(153, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(assignedMemtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel36))
+                .addGap(42, 42, 42)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
-                    .addComponent(jLabel36)
-                    .addComponent(assignedMemtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(trainersListcombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
+                .addGap(86, 86, 86)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(assignTrainerbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CancelEmpbtn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(95, 95, 95))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout assignMemberToTrainerLayout = new javax.swing.GroupLayout(assignMemberToTrainer);
         assignMemberToTrainer.setLayout(assignMemberToTrainerLayout);
         assignMemberToTrainerLayout.setHorizontalGroup(
             assignMemberToTrainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(assignMemberToTrainerLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 903, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, assignMemberToTrainerLayout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 809, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         assignMemberToTrainerLayout.setVerticalGroup(
             assignMemberToTrainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(assignMemberToTrainerLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
-                .addGap(43, 43, 43))
+                .addContainerGap(43, Short.MAX_VALUE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pnlCards.add(assignMemberToTrainer, "assignMemberToTrainer");
@@ -2187,9 +2191,9 @@ public class MainPage extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addComponent(memberSearchtxt2, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(searchAssigenedTrainerbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(351, 351, 351)
+                        .addGap(357, 357, 357)
                         .addComponent(selectAssigenedTrainerbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(39, Short.MAX_VALUE))
@@ -2198,13 +2202,14 @@ public class MainPage extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(searchAssigenedTrainerbtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(selectAssigenedTrainerbtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(memberSearchtxt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(searchAssigenedTrainerbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(selectAssigenedTrainerbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(memberSearchtxt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
 
@@ -2213,16 +2218,16 @@ public class MainPage extends javax.swing.JFrame {
         listTrainersPnlLayout.setHorizontalGroup(
             listTrainersPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(listTrainersPnlLayout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         listTrainersPnlLayout.setVerticalGroup(
             listTrainersPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(listTrainersPnlLayout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
+                .addContainerGap(53, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         pnlCards.add(listTrainersPnl, "trainerTableList");
@@ -2301,7 +2306,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addComponent(memberSearchtxt3, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(searchAssigenedTrainerbtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2352,7 +2357,7 @@ public class MainPage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPage, javax.swing.GroupLayout.PREFERRED_SIZE, 1037, Short.MAX_VALUE)
+            .addComponent(mainPage, javax.swing.GroupLayout.DEFAULT_SIZE, 1037, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2553,7 +2558,8 @@ public class MainPage extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        clearTextFields(addMemberAllTxt());
+        MembersGenderButtonGroup.clearSelection();
         PopupMessage("Member user had been created");
 
     }//GEN-LAST:event_AddbtnActionPerformed
@@ -2611,10 +2617,10 @@ public class MainPage extends javax.swing.JFrame {
         String gender = EmpMalebtn.isSelected() ? "Male" : "Female";
 
         if (RegularEmpbtn.isSelected()) {
-            Employee emp = new Employee(fname, surname, address, phone, salary, gender);
+            Employee emp = new Employee(fname, surname, address, phone, Double.parseDouble(salary), gender);
             GymSystem.getEmployeesList().add(emp);
         } else {
-            Employee emp = new PersonalTrainer(fname, surname, address, phone, salary, gender);
+            Employee emp = new PersonalTrainer(fname, surname, address, phone, Double.parseDouble(salary), gender);
             GymSystem.getEmployeesList().add(emp);
         }
         try {
@@ -2623,6 +2629,9 @@ public class MainPage extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
         }
+        clearTextFields(addEmployeeAllTxt());
+        EmpGenderButtonGroup.clearSelection();
+        employeeTypeButtonGroup.clearSelection();
         PopupMessage("Employee added succesfuly");
 
     }//GEN-LAST:event_AddEmpbtnActionPerformed
@@ -2659,7 +2668,7 @@ public class MainPage extends javax.swing.JFrame {
             txtFirstNameEmpEdit.setText(emp.getFirstName());
             txtSurnameEmpEdit.setText(emp.getSurname());
             txtAddressEmpEdit.setText(emp.getAddress());
-            txtSalaryEmpEdit.setText(emp.getSalary());
+            txtSalaryEmpEdit.setText(Double.toString(emp.getSalary()));
             txtPhoneNumberEmpEdit.setText(emp.getPhone());
             if (emp instanceof PersonalTrainer) {
                 TrainerEmpEditbtn.setSelected(true);
@@ -2770,7 +2779,7 @@ public class MainPage extends javax.swing.JFrame {
 
         emp.setFirstName(fname);
         emp.setSurname(surname);
-        emp.setSalary(salary);
+        emp.setSalary(Double.parseDouble(salary));
         emp.setAddress(address);
         emp.setPhone(phone);
         emp.setGender(gender);
@@ -3132,12 +3141,12 @@ public class MainPage extends javax.swing.JFrame {
         int row = trainerTableList.getSelectedRow();
         if (trainerTableList.getSelectedRow() < 0) {
             PopupMessage("Please select a trainer from the list.");
-        } else if((int)trainerTableList.getValueAt(row, 2) == 0){
+        } else if ((int) trainerTableList.getValueAt(row, 2) == 0) {
             PopupMessage("The trainer selected doesnt have any members assigned to.");
-        }else{
-        jLabel38.setText("Assigned members to "+(String)trainerTableList.getValueAt(row, 1));
-        renderMemberTrainerTableData("");
-        cardLayout.show(pnlCards, "listMembersOfTrainersPnl");
+        } else {
+            jLabel38.setText("Assigned members to " + (String) trainerTableList.getValueAt(row, 1));
+            renderMemberTrainerTableData("");
+            cardLayout.show(pnlCards, "listMembersOfTrainersPnl");
         }
     }//GEN-LAST:event_selectAssigenedTrainerbtn1ActionPerformed
 
@@ -3149,7 +3158,7 @@ public class MainPage extends javax.swing.JFrame {
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
         renderMemberTableData();
-        cardLayout.show(pnlCards, "manageMembersPnl");
+        cardLayout.show(pnlCards, "trainerTableList");
     }//GEN-LAST:event_button1ActionPerformed
 
     /**
@@ -3387,24 +3396,69 @@ public class MainPage extends javax.swing.JFrame {
         return true;
     }
 
+//    public boolean containsOnlyLetters(TextField textField, String error) {
+//        final Color DefaultC = new Color(170, 170, 170);
+//        final Color ErrorC = new Color(250, 0, 0);
+//        textField.setShadowColor(DefaultC);
+//        String str = textField.getText();
+//        boolean found = false;
+//
+//        for (char c : str.toCharArray()) {
+//            if (!Character.isLetter(c) && found == false) {
+//                PopupMessage("Please follow the right cardinalities for " + error);
+//                found = true;
+//                textField.requestFocus();
+//                textField.setShadowColor(ErrorC);
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+    
+    
     public boolean containsOnlyLetters(TextField textField, String error) {
-        final Color DefaultC = new Color(170, 170, 170);
-        final Color ErrorC = new Color(250, 0, 0);
-        textField.setShadowColor(DefaultC);
-        String str = textField.getText();
-        boolean found = false;
+    final Color DefaultC = new Color(170, 170, 170);
+    final Color ErrorC = new Color(250, 0, 0);
+    textField.setShadowColor(DefaultC);
+    String str = textField.getText();
+    boolean found = false;
+    boolean twoWords = false;
 
-        for (char c : str.toCharArray()) {
-            if (!Character.isLetter(c) && found == false) {
-                PopupMessage("Please follow the right cardinalities for " + error);
-                found = true;
-                textField.requestFocus();
-                textField.setShadowColor(ErrorC);
-                return false;
-            }
-        }
-        return true;
+    if (error.toLowerCase().equals("position") || error.toLowerCase().equals("department") || error.toLowerCase().equals("major")) {
+        twoWords = true;
     }
+
+    if (twoWords) {
+        String[] words = str.split(" ");
+        if (words.length < 1 || words.length > 2) {
+            PopupMessage("Please enter a valid " + error + " (one or two words only)");
+            textField.requestFocus();
+            textField.setShadowColor(ErrorC);
+            return false;
+        }
+        str = String.join("", words);
+    } else {
+        if (str.contains(" ")) {
+            PopupMessage("Please enter a valid " + error + " (one word only)");
+            textField.requestFocus();
+            textField.setShadowColor(ErrorC);
+            return false;
+        }
+    }
+
+    for (char c : str.toCharArray()) {
+        if (!Character.isLetter(c) && !Character.isWhitespace(c)) {
+            PopupMessage("Please enter a valid " + error + " (letters only)");
+            found = true;
+            textField.requestFocus();
+            textField.setShadowColor(ErrorC);
+            return false;
+        }
+    }
+
+    return true;
+}
+
 
     public static void PopupMessage(String error) {
         Message obj = new Message();
@@ -3428,7 +3482,7 @@ public class MainPage extends javax.swing.JFrame {
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
             if (allowedChars.indexOf(c) == -1) {
-                PopupMessage("Please follow the right cardinalities for the pohne numbers or salary ");
+                PopupMessage("Please follow the right cardinalities only numbers can be inputted     ");
                 textField.requestFocus();
                 textField.setShadowColor(ErrorC);
                 return false;
@@ -3647,7 +3701,7 @@ public class MainPage extends javax.swing.JFrame {
     public void renderMemberTrainerTableData(String s) {
         DefaultTableModel tableModel = (DefaultTableModel) trainerTableList1.getModel();
         tableModel.setRowCount(0);
-        for (Member mem : ((PersonalTrainer)TrainerFindByID()).getMembers()) {
+        for (Member mem : ((PersonalTrainer) TrainerFindByID()).getMembers()) {
             String type = mem instanceof PolytechnicStaff ? "Staff" : "Student";
             int id = mem.getId();
             String name = mem.getFullName();
@@ -3660,19 +3714,19 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
 
-     public Employee TrainerFindByID() {
+    public Employee TrainerFindByID() {
         int row = trainerTableList.getSelectedRow();
         Object id = trainerTableList.getModel().getValueAt(row, 0);
         String idString = id.toString();
         int idFound = Integer.parseInt(idString);
         for (Employee emp : GymSystem.getEmployeesList()) {
-            if (emp instanceof PersonalTrainer && emp.getId() == idFound){
-            return emp;    
+            if (emp instanceof PersonalTrainer && emp.getId() == idFound) {
+                return emp;
             }
         }
         return null;
     }
-    
+
     public int trainerscount() {
         int count = 0;
         for (Employee emp : GymSystem.getEmployeesList()) {

@@ -6,7 +6,7 @@ public class PersonalTrainer extends Employee {
 
     private ArrayList<Member> members;
 
-    public PersonalTrainer(String firstName, String surname, String address, String phone, String salary, String gender) {
+    public PersonalTrainer(String firstName, String surname, String address, String phone, Double salary, String gender) {
         super(firstName, surname, address, phone, salary, gender);
         this.members = new ArrayList<Member>();
     }

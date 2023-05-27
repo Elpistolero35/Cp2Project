@@ -13,11 +13,11 @@ public class Employee implements Serializable{
     private String surname;
     private String address;
     private String phone;
-    private String salary;
+    private Double salary;
     private String gender;
     private static int counter;
 
-    public Employee(String firstName, String surname, String address, String phone, String salary, String gender) {
+    public Employee(String firstName, String surname, String address, String phone, Double salary, String gender) {
         this.firstName = Character.toUpperCase(firstName.charAt(0)) + firstName.substring(1);
         this.surname = Character.toUpperCase(surname.charAt(0)) + surname.substring(1);
         this.address = address;
@@ -83,11 +83,11 @@ public class Employee implements Serializable{
         this.phone = phone;
     }
 
-    public String getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
     
