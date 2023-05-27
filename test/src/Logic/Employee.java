@@ -28,6 +28,18 @@ public class Employee implements Serializable{
         counter++;
     }
 
+    public Employee(String firstName, String surname, String address, String phone, Double salary) {
+        this.firstName = firstName;
+        this.surname = surname;
+        this.address = address;
+        this.phone = phone;
+        this.salary = salary;
+        this.id = counter;
+        counter++;
+    }
+    
+    
+
     public void setGender(String gender) {
         this.gender = gender;
     }

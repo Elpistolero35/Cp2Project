@@ -11,7 +11,11 @@ public class PersonalTrainer extends Employee {
         this.members = new ArrayList<Member>();
     }
 
-   
+    public PersonalTrainer(String firstName, String surname, String address, String phone, Double salary) {
+        super(firstName, surname, address, phone, salary);
+        this.members = new ArrayList<Member>();
+    }
+
 
     public ArrayList<Member> getMembers() {
         return members;
