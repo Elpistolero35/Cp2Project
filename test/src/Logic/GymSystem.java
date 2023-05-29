@@ -138,6 +138,7 @@ public class GymSystem {
             printWriter.println();
             printWriter.println();
             printWriter.write("Polytechnic Students:");
+            printWriter.println();
             for (Member mem : GymSystem.getMembersList()) {
                 if (mem instanceof PolytechnicStudent) {
                     printWriter.write("Full Name:" + mem.getFullName());

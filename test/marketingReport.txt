@@ -29,9 +29,15 @@ Address:Apt85, Road 1787, Juffair
 Phone:145853
 Position:Logistics Tutor
 Department:Logistics dept
-Total amount of Staff: 6
+Full Name:Mosa Jaffer
+Address:dadwa
+Phone:21313
+Position:dawd
+Department:Dicat
+Total amount of Staff: 7
 
-Polytechnic Students:Full Name:Zainab Mohammed
+Polytechnic Students:
+Full Name:Zainab Mohammed
 Address:Apt45, Road 1578, Riffa
 Phone:128756
 Major:Business 
