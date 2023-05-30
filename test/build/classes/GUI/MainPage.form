@@ -52,7 +52,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="mainPage" alignment="0" pref="1037" max="32767" attributes="0"/>
+          <Component id="mainPage" alignment="0" pref="1119" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -185,6 +185,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addEmployeeButtonActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.Button()"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="manageEmployeesButton">
               <Properties>
@@ -203,6 +206,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageEmployeesButtonActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.Button()"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="listTrainersButton">
               <Properties>
@@ -221,6 +227,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listTrainersButtonActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.Button()"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="memberSectionLabel">
               <Properties>
@@ -251,6 +260,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addMemberButtonActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.Button()"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="manageMembersButton">
               <Properties>
@@ -269,6 +281,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageMembersButtonActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.Button()"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="assignTrainerButton">
               <Properties>
@@ -287,6 +302,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignTrainerButtonActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.Button()"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="dashboardButton">
               <Properties>
@@ -309,6 +327,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dashboardButtonActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.Button()"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="exitbtn">
               <Properties>
@@ -344,6 +365,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignTrainerButton1ActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GUI.Button()"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -377,11 +401,11 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace pref="111" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
                           <Component id="roundPanel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="369" max="-2" attributes="0"/>
+                          <EmptySpace pref="323" max="32767" attributes="0"/>
                           <Component id="roundPanel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="65" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
@@ -393,14 +417,14 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="136" max="32767" attributes="0"/>
+                          <EmptySpace pref="142" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="roundPanel1" min="-2" max="-2" attributes="0"/>
                               <Component id="roundPanel2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                           <Component id="roundPanel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="150" max="32767" attributes="0"/>
+                          <EmptySpace pref="167" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -570,19 +594,19 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jPanel1" pref="825" max="32767" attributes="0"/>
-                          <EmptySpace pref="52" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace pref="68" max="32767" attributes="0"/>
+                          <Component id="jPanel1" min="-2" pref="823" max="-2" attributes="0"/>
+                          <EmptySpace pref="70" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace pref="87" max="32767" attributes="0"/>
-                          <Component id="jPanel1" pref="544" max="32767" attributes="0"/>
-                          <EmptySpace pref="74" max="32767" attributes="0"/>
+                          <Component id="jPanel1" min="-2" pref="539" max="-2" attributes="0"/>
+                          <EmptySpace pref="91" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -605,14 +629,14 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="266" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="AddEmpbtn" min="-2" pref="76" max="-2" attributes="0"/>
-                              <EmptySpace pref="142" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="CancelEmpbtn" min="-2" pref="76" max="-2" attributes="0"/>
-                              <EmptySpace pref="265" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="29" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -652,14 +676,14 @@
                                   </Group>
                                   <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="29" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="66" max="32767" attributes="0"/>
+                              <EmptySpace pref="65" max="32767" attributes="0"/>
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -702,7 +726,7 @@
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="txtSalaryEmpInput" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="90" max="32767" attributes="0"/>
+                              <EmptySpace pref="88" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="AddEmpbtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="CancelEmpbtn" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -897,18 +921,18 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="37" max="32767" attributes="0"/>
+                          <EmptySpace pref="78" max="32767" attributes="0"/>
                           <Component id="jPanel3" min="-2" pref="805" max="-2" attributes="0"/>
-                          <EmptySpace pref="37" max="32767" attributes="0"/>
+                          <EmptySpace pref="78" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="84" max="32767" attributes="0"/>
-                          <Component id="jPanel3" pref="549" max="32767" attributes="0"/>
-                          <EmptySpace pref="72" max="32767" attributes="0"/>
+                          <EmptySpace pref="87" max="32767" attributes="0"/>
+                          <Component id="jPanel3" pref="556" max="32767" attributes="0"/>
+                          <EmptySpace pref="74" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -972,7 +996,7 @@
                                   <Component id="Cancelbtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="Addbtn" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="55" max="32767" attributes="0"/>
+                              <EmptySpace pref="62" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1397,9 +1421,9 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="73" max="32767" attributes="0"/>
                           <Component id="jPanel4" min="-2" pref="815" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="73" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1432,22 +1456,21 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jScrollPane2" min="-2" pref="750" max="-2" attributes="0"/>
-                                      <EmptySpace pref="29" max="32767" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="employeeSearchtxt" min="-2" pref="204" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="button3" min="-2" pref="59" max="-2" attributes="0"/>
-                                      <EmptySpace pref="248" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jLabel35" min="-2" pref="207" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="editEmployeebtn" min="-2" pref="103" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="deletebtn" min="-2" pref="103" max="-2" attributes="0"/>
-                                      <EmptySpace pref="27" max="32767" attributes="0"/>
                                   </Group>
+                                  <Component id="jScrollPane2" min="-2" pref="750" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace pref="29" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1460,6 +1483,7 @@
                                       <Component id="employeeSearchtxt" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="editEmployeebtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="deletebtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="button3" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -1537,6 +1561,13 @@
                       </Events>
                     </Component>
                     <Component class="GUI.TextField" name="employeeSearchtxt">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Search by ID or Name"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="employeeSearchtxtFocusGained"/>
+                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="employeeSearchtxtFocusLost"/>
+                      </Events>
                     </Component>
                     <Component class="GUI.Button" name="editEmployeebtn">
                       <Properties>
@@ -1573,6 +1604,14 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deletebtnActionPerformed"/>
                       </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel35">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Dialog" size="18" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Manage Employes"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1637,6 +1676,8 @@
                                       <Component id="memberSearchtxt" min="-2" pref="204" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="button2" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="jLabel40" min="-2" pref="161" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="editMemberbtn" min="-2" pref="103" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
@@ -1658,6 +1699,7 @@
                                       <Component id="memberSearchtxt" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="editMemberbtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="deletebtn2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1728,6 +1770,13 @@
                       </SubComponents>
                     </Container>
                     <Component class="GUI.TextField" name="memberSearchtxt">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Search by ID or Name"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="memberSearchtxtFocusGained"/>
+                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="memberSearchtxtFocusLost"/>
+                      </Events>
                     </Component>
                     <Component class="GUI.Button" name="editMemberbtn">
                       <Properties>
@@ -1776,6 +1825,14 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button2ActionPerformed"/>
                       </Events>
                     </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel40">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Dialog" size="18" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Manage Employees"/>
+                      </Properties>
+                    </Component>
                   </SubComponents>
                 </Container>
               </SubComponents>
@@ -1800,7 +1857,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                          <Component id="jPanel5" pref="854" max="32767" attributes="0"/>
+                          <Component id="jPanel5" pref="930" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1809,7 +1866,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="jPanel5" pref="621" max="32767" attributes="0"/>
+                          <Component id="jPanel5" pref="633" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1833,11 +1890,11 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="274" max="32767" attributes="0"/>
+                              <EmptySpace pref="301" max="32767" attributes="0"/>
                               <Component id="EditEmpbtn" min="-2" pref="76" max="-2" attributes="0"/>
-                              <EmptySpace pref="148" max="32767" attributes="0"/>
+                              <EmptySpace pref="176" max="32767" attributes="0"/>
                               <Component id="CancelEmpbtn1" min="-2" pref="76" max="-2" attributes="0"/>
-                              <EmptySpace pref="274" max="32767" attributes="0"/>
+                              <EmptySpace pref="301" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
@@ -2127,18 +2184,18 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="39" max="32767" attributes="0"/>
+                          <EmptySpace pref="77" max="32767" attributes="0"/>
                           <Component id="jPanel6" min="-2" pref="810" max="-2" attributes="0"/>
-                          <EmptySpace pref="36" max="32767" attributes="0"/>
+                          <EmptySpace pref="74" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="84" max="32767" attributes="0"/>
-                          <Component id="jPanel6" pref="549" max="32767" attributes="0"/>
-                          <EmptySpace pref="72" max="32767" attributes="0"/>
+                          <EmptySpace pref="87" max="32767" attributes="0"/>
+                          <Component id="jPanel6" pref="556" max="32767" attributes="0"/>
+                          <EmptySpace pref="74" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2202,7 +2259,7 @@
                                   <Component id="Cancelbtn1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="Addbtn1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="35" max="32767" attributes="0"/>
+                              <EmptySpace pref="38" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2281,11 +2338,11 @@
                                   <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="txtMemberFirstNameEdit" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="38" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" pref="39" max="32767" attributes="0"/>
                                   <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="txtMemberSurnameEdit" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="38" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" pref="40" max="32767" attributes="0"/>
                                   <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="txtMemberPhoneNumberEdit" min="-2" max="-2" attributes="0"/>
@@ -2374,11 +2431,11 @@
                                       <Component id="StudentEditbtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="StaffEditbtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="unrelated" pref="38" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" pref="39" max="32767" attributes="0"/>
                                   <Component id="lblEditMajorOrPosition" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="txtMemberMajorOrPositionEdit" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" pref="38" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" pref="40" max="32767" attributes="0"/>
                                   <Component id="lblEditSportTeamOrDepartment" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="txtMemberSportTeamOrDepartmentEdit" min="-2" max="-2" attributes="0"/>
@@ -2509,11 +2566,11 @@
                                       <Component id="memberMaleEditbtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="memberFemaleEditbtn" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                                  <EmptySpace pref="39" max="32767" attributes="0"/>
                                   <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="txtMemberAddressEdit" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                                  <EmptySpace pref="40" max="32767" attributes="0"/>
                                   <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -2665,7 +2722,9 @@
                                       <Component id="memberSearchtxt1" min="-2" pref="204" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="searchAssigenedTrainerbtn" min="-2" pref="56" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="357" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                       <Component id="selectAssigenedTrainerbtn" min="-2" pref="108" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane5" min="-2" pref="737" max="-2" attributes="0"/>
@@ -2682,7 +2741,10 @@
                                   <Component id="searchAssigenedTrainerbtn" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="selectAssigenedTrainerbtn" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                              <Component id="selectAssigenedTrainerbtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                           <Component id="memberSearchtxt1" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -2743,6 +2805,13 @@
                       </SubComponents>
                     </Container>
                     <Component class="GUI.TextField" name="memberSearchtxt1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Search by ID or Name"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="memberSearchtxt1FocusGained"/>
+                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="memberSearchtxt1FocusLost"/>
+                      </Events>
                     </Component>
                     <Component class="GUI.Button" name="searchAssigenedTrainerbtn">
                       <Properties>
@@ -2757,7 +2826,7 @@
                     </Component>
                     <Component class="GUI.Button" name="selectAssigenedTrainerbtn">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Select"/>
+                        <Property name="text" type="java.lang.String" value="Assign"/>
                         <Property name="focusable" type="boolean" value="false"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Dialog" size="18" style="0"/>
@@ -2766,6 +2835,14 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="selectAssigenedTrainerbtnActionPerformed"/>
                       </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel41">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Dialog" size="18" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Select a member from the table to assign "/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2790,18 +2867,18 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="36" max="32767" attributes="0"/>
+                          <EmptySpace pref="77" max="32767" attributes="0"/>
                           <Component id="jPanel7" min="-2" pref="809" max="-2" attributes="0"/>
-                          <EmptySpace pref="34" max="32767" attributes="0"/>
+                          <EmptySpace pref="75" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
+                          <EmptySpace pref="75" max="32767" attributes="0"/>
+                          <Component id="jPanel7" pref="570" max="32767" attributes="0"/>
                           <EmptySpace pref="72" max="32767" attributes="0"/>
-                          <Component id="jPanel7" pref="563" max="32767" attributes="0"/>
-                          <EmptySpace pref="70" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2854,7 +2931,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="166" max="32767" attributes="0"/>
+                              <EmptySpace pref="171" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="assignedMemtxt" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2869,7 +2946,7 @@
                                   <Component id="assignTrainerbtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="CancelEmpbtn2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="166" max="32767" attributes="0"/>
+                              <EmptySpace pref="171" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2995,7 +3072,9 @@
                                       <Component id="memberSearchtxt2" min="-2" pref="204" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="searchAssigenedTrainerbtn1" min="-2" pref="56" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="357" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                      <Component id="jLabel42" min="-2" pref="287" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                       <Component id="selectAssigenedTrainerbtn1" min="-2" pref="108" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane6" alignment="1" min="-2" pref="737" max="-2" attributes="0"/>
@@ -3012,7 +3091,10 @@
                                   <Component id="searchAssigenedTrainerbtn1" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="selectAssigenedTrainerbtn1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                              <Component id="selectAssigenedTrainerbtn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                           <Component id="memberSearchtxt2" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -3073,6 +3155,13 @@
                       </SubComponents>
                     </Container>
                     <Component class="GUI.TextField" name="memberSearchtxt2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Search by ID or Name"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="memberSearchtxt2FocusGained"/>
+                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="memberSearchtxt2FocusLost"/>
+                      </Events>
                     </Component>
                     <Component class="GUI.Button" name="searchAssigenedTrainerbtn1">
                       <Properties>
@@ -3096,6 +3185,14 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="selectAssigenedTrainerbtn1ActionPerformed"/>
                       </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel42">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Dialog" size="18" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="List of Personal Trainers"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -3244,6 +3341,13 @@
                       </SubComponents>
                     </Container>
                     <Component class="GUI.TextField" name="memberSearchtxt3">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Search by ID or Name"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="memberSearchtxt3FocusGained"/>
+                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="memberSearchtxt3FocusLost"/>
+                      </Events>
                     </Component>
                     <Component class="GUI.Button" name="searchAssigenedTrainerbtn2">
                       <Properties>
