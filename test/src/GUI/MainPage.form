@@ -1116,9 +1116,6 @@
                           </Properties>
                         </Component>
                         <Component class="GUI.TextField" name="txtMemberFirstNameInput">
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMemberFirstNameInputActionPerformed"/>
-                          </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel17">
                           <Properties>

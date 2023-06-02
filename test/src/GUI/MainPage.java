@@ -851,12 +851,6 @@ public class MainPage extends javax.swing.JFrame {
         jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel25.setText("Surname");
 
-        txtMemberFirstNameInput.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMemberFirstNameInputActionPerformed(evt);
-            }
-        });
-
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel17.setText("First name");
 
@@ -2576,10 +2570,6 @@ public class MainPage extends javax.swing.JFrame {
         txtMemberMajorOrPositionInput.setText("");
         txtMemberSportTeamOrDepartmentInput.setText("");
     }//GEN-LAST:event_StudentbtnActionPerformed
-
-    private void txtMemberFirstNameInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMemberFirstNameInputActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMemberFirstNameInputActionPerformed
 
     private void txtMemberSurnameInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMemberSurnameInputActionPerformed
         // TODO add your handling code here:
